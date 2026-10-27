@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f3fbfd">
+  <meta name="description" content="Customize appearance, notifications, sounds and data for UniHelper.">
+  <title>Settings | UniHelper</title>
+  <link rel="icon" type="image/png" href="assets/images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/settings.css">
+  <script src="js/app.js" defer></script>
+  <script src="js/settings.js" defer></script>
+</head>
+<body data-page="settings">
+  <main class="main" id="main">
+    <section class="page-hero hero--campus" aria-labelledby="settingsTitle">
+      <div class="hero-intro">
+        <div class="hero-icon" aria-hidden="true"><img src="assets/icons/settings.svg" alt=""></div>
+        <div>
+          <h1 id="settingsTitle">Settings</h1>
+          <p>Choose how UniHelper looks, sounds, and keeps in touch with you.</p>
+        </div>
+      </div>
+    </section>
+
+    <nav class="settings-nav" aria-label="Settings sections">
+      <div class="chip-row" id="settingsTabs">
+        <button class="chip selected" type="button" data-target="appearance" aria-pressed="true">Appearance</button>
+        <button class="chip" type="button" data-target="notifications" aria-pressed="false">Notifications</button>
+        <button class="chip" type="button" data-target="sounds" aria-pressed="false">Sounds</button>
+        <button class="chip" type="button" data-target="data" aria-pressed="false">Data</button>
+        <button class="chip" type="button" data-target="registration" aria-pressed="false">Registration</button>
+      </div>
+    </nav>
+
+    <div class="container settings-container">
+      <section class="settings-section" id="appearance" aria-labelledby="appearance-h">
+        <h2 id="appearance-h">Appearance</h2>
+        <div class="setting-row">
+          <button class="info-icon" type="button" aria-label="About Dark Mode" data-tip="Uses a darker color scheme to reduce eye strain.">i</button>
+          <span class="setting-name">Dark Mode</span>
+          <label class="toggle" data-wip><input type="checkbox" aria-label="Dark Mode"><span class="toggle-track"></span></label>
+        </div>
+        <div class="setting-row">
+          <button class="info-icon" type="button" aria-label="About Match System" data-tip="Automatically follows your device's current appearance settings.">i</button>
+          <span class="setting-name">Match System</span>
+          <label class="toggle" data-wip><input type="checkbox" aria-label="Match System"><span class="toggle-track"></span></label>
+        </div>
+      </section>
+
+      <section class="settings-section" id="notifications" aria-labelledby="notifications-h">
+        <h2 id="notifications-h">Notifications</h2>
+        <div class="setting-row">
+          <button class="info-icon" type="button" aria-label="About Browser Notifications" data-tip="Enables or disables all browser notifications from UniHelper.">i</button>
+          <span class="setting-name">Browser Notifications</span>
+          <label class="toggle" data-wip><input type="checkbox" aria-label="Browser Notifications"><span class="toggle-track"></span></label>
+        </div>
+        <div class="setting-row">
+          <button class="info-icon" type="button" aria-label="About Featured Articles" data-tip="Notifies you when new featured articles are published.">i</button>
+          <span class="setting-name">Featured Articles</span>
+          <label class="toggle" data-wip><input type="checkbox" aria-label="Featured Articles"><span class="toggle-track"></span></label>
+        </div>
+        <div class="setting-row">
+          <button class="info-icon" type="button" aria-label="About Community Reactions" data-tip="Notifies you when someone reacts to your posts or comments.">i</button>
+          <span class="setting-name">Community Reactions</span>
+          <label class="toggle" data-wip><input type="checkbox" aria-label="Community Reactions"><span class="toggle-track"></span></label>
+        </div>
+        <div class="setting-row">
+          <button class="info-icon" type="button" aria-label="About Community Replies" data-tip="Notifies you when someone replies to your posts or comments.">i</button>
+          <span class="setting-name">Community Replies</span>
+          <label class="toggle" data-wip><input type="checkbox" aria-label="Community Replies"><span class="toggle-track"></span></label>
+        </div>
+        <div class="setting-row">
+          <button class="info-icon" type="button" aria-label="About Daily Wellness Check" data-tip="Receive a daily check-in from Umi on your mood and well-being.">i</button>
+          <span class="setting-name">Daily Wellness Check</span>
+          <label class="toggle" data-wip><input type="checkbox" aria-label="Daily Wellness Check"><span class="toggle-track"></span></label>
+        </div>
+      </section>
+
+      <section class="settings-section" id="sounds" aria-labelledby="sounds-h">
+        <h2 id="sounds-h">Sounds</h2>
+        <div class="setting-row">
+          <button class="info-icon" type="button" aria-label="About Button Click" data-tip="Volume of click sound whenever you interact with buttons and menus">i</button>
+          <span class="setting-name">Button Click</span>
+          <span class="sound-value" id="soundValue">0%</span><input type="range" class="sound-slider" id="soundSlider" min="0" max="100" value="0" aria-label="Button click volume">
+        </div>
+      </section>
+
+      <section class="settings-section" id="data" aria-labelledby="data-h">
+        <h2 id="data-h">Data</h2>
+        <div class="setting-row">
+          <button class="info-icon" type="button" aria-label="About Clear Cache" data-tip="Removes temporary files stored by UniHelper.">i</button>
+          <span class="setting-name">Clear Cache</span>
+          <button class="btn btn-soft btn-sm" type="button" data-wip>Clear</button>
+        </div>
+        <div class="setting-row">
+          <button class="info-icon" type="button" aria-label="About Clear Cookies" data-tip="Removes cookies stored by UniHelper. You may need to sign in again after clearing cookies.">i</button>
+          <span class="setting-name">Clear Cookies</span>
+          <button class="btn btn-soft btn-sm" type="button" data-wip>Clear</button>
+        </div>
+      </section>
+
+      <section class="settings-section registration" id="registration" aria-labelledby="registration-h">
+        <h2 id="registration-h">Registration</h2>
+        <div id="registrationBody">
+          <h3>Enjoying UniHelper?</h3>
+          <p>Create an account to save your profile, preferences, and history, so UniHelper remembers you wherever you sign in.</p>
+          <a class="btn" href="login.html">Log In / Sign In</a>
+        </div>
+      </section>
+
+      <div class="settings-footer">
+        <button class="btn" type="button" data-wip>Save Changes</button>
+        <img class="settings-gears" src="assets/icons/gears.png" alt="">
+      </div>
+    </div>
+  </main>
+</body>
+</html>

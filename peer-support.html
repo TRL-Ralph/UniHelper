@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f3fbfd">
+  <meta name="description" content="Share experiences and support one another. Grow together as a community.">
+  <title>Peer Support | UniHelper</title>
+  <link rel="icon" type="image/png" href="assets/images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/help.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/peer.js" defer></script>
+</head>
+<body data-page="help">
+  <main class="main" id="main">
+    <section class="page-hero hero--peer" aria-labelledby="peerTitle">
+      <div class="hero-intro">
+        <div class="hero-icon" aria-hidden="true"><img src="assets/icons/peer-support.png" alt=""></div>
+        <div>
+          <h1 id="peerTitle">Peer Support</h1>
+          <p>Share experiences and support one another. Grow together as a community.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="peer-controls">
+        <a class="btn btn-soft btn-sm" href="get-help.html"><span aria-hidden="true">←</span> Get Help</a>
+        <button class="btn new-thread" type="button" data-wip><span aria-hidden="true">+</span> New Thread</button>
+        <div class="chip-row" id="tagFilter" role="group" aria-label="Filter threads by tag"></div>
+      </div>
+
+      <div class="section-head thread-head">
+        <h2 id="threadHeading">All Threads</h2>
+        <span class="result-count" id="threadCount" aria-live="polite"></span>
+      </div>
+      <section class="thread-list" id="threadList" aria-labelledby="threadHeading"></section>
+      <p class="empty-state" id="threadEmpty" hidden>No threads with this tag yet. Be the first to start one!</p>
+    </div>
+  </main>
+</body>
+</html>

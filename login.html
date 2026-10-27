@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#eef7fc">
+  <meta name="description" content="Log in to UniHelper, the student mental health support space for UMak.">
+  <title>Welcome | UniHelper</title>
+  <link rel="icon" type="image/png" href="assets/images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/login.css">
+  <script src="js/app.js" defer></script>
+  <script src="js/login.js" defer></script>
+</head>
+<body data-page="login" data-layout="bare">
+  <main class="login-page" id="main">
+    <section class="visual-panel" aria-hidden="true">
+      <img class="campus-image" src="assets/images/login-campus.jpg" alt="" draggable="false">
+      <div class="visual-caption">
+        <p>You’re not alone.</p>
+        <p>UMak is with you.</p>
+      </div>
+    </section>
+
+    <section class="form-panel">
+      <img class="leaf leaf-one" src="assets/icons/leaves.svg" alt="" aria-hidden="true">
+      <img class="leaf leaf-two" src="assets/icons/leaves.svg" alt="" aria-hidden="true">
+
+      <div class="login-content">
+        <header class="welcome">
+          <img class="login-logo" src="assets/images/logo.svg" alt="UniHelper logo">
+          <h1>Welcome!</h1>
+          <p>Log in to UniHelper.</p>
+        </header>
+
+        <form id="loginForm" class="login-form" novalidate>
+          <div class="field">
+            <div class="field-wrap">
+              <label class="sr-only" for="username">Username or Email</label>
+              <span class="field-icon" aria-hidden="true"><img src="assets/icons/envelope.png" alt="" width="18" height="18"></span>
+              <input id="username" name="username" type="text" placeholder="Username or Email" autocomplete="username" aria-describedby="usernameError" required>
+            </div>
+            <p class="field-error" id="usernameError" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <div class="field-wrap">
+              <label class="sr-only" for="password">Password</label>
+              <span class="field-icon" aria-hidden="true"><img src="assets/icons/lock.png" alt="" width="18" height="18"></span>
+              <input id="password" name="password" type="password" placeholder="Password" autocomplete="current-password" aria-describedby="passwordError" required>
+              <button class="password-toggle" type="button" id="togglePassword" aria-label="Show password" aria-pressed="false">
+                <svg class="eye-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12s3.4-6 9.5-6 9.5 6 9.5 6-3.4 6-9.5 6-9.5-6-9.5-6Z"></path><circle cx="12" cy="12" r="2.7"></circle><path class="eye-slash" d="M4 4 20 20"></path></svg>
+              </button>
+            </div>
+            <p class="field-error" id="passwordError" aria-live="polite"></p>
+          </div>
+
+          <div class="form-meta"><a href="#" data-wip>Forgot password?</a></div>
+
+          <button class="btn btn-block btn-lg" type="submit">
+            <span>Log In</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 5l7 7-7 7"></path></svg>
+          </button>
+
+          <div class="or-divider" aria-hidden="true"><span></span><small>or</small><span></span></div>
+
+          <button class="university-button" type="button" data-wip>
+            <img src="assets/images/university-emblem.png" alt="" aria-hidden="true">
+            <span>University of Makati Email</span>
+          </button>
+
+          <button class="guest-link" type="button" id="guestLogin">Log in as Guest</button>
+          <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <footer class="page-footer">
+        <span class="heart" aria-hidden="true">♡</span>
+        <i>Your mental health matters.</i>
+        <img src="assets/icons/leaf.svg" alt="" aria-hidden="true">
+      </footer>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,34 @@
+/* Self-Care — journal card, exercise + technique grids */
+
+.journal-card h2 { margin-bottom: 8px; font-size: var(--fs-lg); }
+.journal-icon { display: block; width: 52px; height: 52px; margin: 0 auto 10px; object-fit: contain; }
+.journal-card p { margin-bottom: 14px; font-size: var(--fs-sm); line-height: 1.5; font-weight: 500; }
+
+.care-section + .care-section { margin-top: 36px; }
+.care-section .chip-row { margin: -4px 0 18px; }
+.care-section .section-head { align-items: center; }
+
+.care-grid { --cols: 4; }
+.side-grid { --cols: 2; }
+.care-grid .media-media { height: 140px; }
+.care-grid .media-media img { object-position: center 28%; }
+.side-grid .media-card--h { min-height: 140px; }
+.side-grid .media-media { flex-basis: 34%; }
+.side-grid .media-media img { object-position: center 25%; }
+
+.media-card[hidden] { display: none; }
+
+@media (max-width: 1280px) {
+  .care-grid { --cols: 3; }
+}
+@media (max-width: 1100px) {
+  .care-grid { --cols: 2; }
+}
+@media (max-width: 760px) {
+  .side-grid { --cols: 1; }
+}
+@media (max-width: 640px) {
+  .care-grid { --cols: 1; }
+  .care-section .section-head { flex-wrap: wrap; }
+  .care-section .head-action { margin-left: 0; }
+}

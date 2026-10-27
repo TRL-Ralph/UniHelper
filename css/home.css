@@ -1,0 +1,281 @@
+/* Home — mood check-in, featured articles, recent posts */
+
+.page-hero .hero-mascot {
+  width: 210px;
+  margin-top: -84px;
+  margin-bottom: -14px;
+}
+
+.page-hero .hero-intro {
+  gap: 8px;
+  padding-right: 36px;
+}
+
+.page-hero .hero-intro p {
+  margin-bottom: 14px;
+}
+
+.mood-card {
+  flex: 0 1 440px;
+  width: 440px;
+  margin-right: clamp(0px, 4vw, 70px);
+  text-align: left;
+}
+
+.mood-card h2 {
+  margin-bottom: 14px;
+  font-size: var(--fs-lg);
+}
+
+.mood-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.mood-option {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  padding: 4px 0;
+  border: 0;
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-sm);
+  color: var(--brand);
+  background: none;
+}
+
+.mood-option img {
+  display: block;
+  width: clamp(46px, 5.2vw, 72px);
+  height: auto;
+  transition: transform 0.15s;
+  object-fit: contain;
+  aspect-ratio: 1;
+}
+
+.mood-option:hover img {
+  transform: scale(1.1);
+}
+
+.mood-option.selected {
+  font-weight: 700;
+}
+
+.mood-option.selected img {
+  transform: scale(1.22);
+}
+
+.mood-option.selected span {
+  margin-top: 4px;
+}
+
+.mood-confirm,
+.mood-done {
+  display: flex;
+  margin: 14px auto 0;
+}
+
+.mood-response {
+  text-align: center;
+}
+
+.mood-response h2 {
+  margin-bottom: 8px;
+  font-size: var(--fs-md);
+}
+
+.mood-response > p {
+  margin-bottom: 14px;
+  font-size: var(--fs-sm);
+  color: var(--text);
+}
+
+.mood-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 12px;
+  padding: 12px 14px;
+  border: 1px solid #bcd8ec;
+  border-radius: 8px;
+  text-align: left;
+  background: #e3f3ff;
+}
+
+.mood-links.single {
+  grid-template-columns: 1fr;
+}
+
+.mood-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--brand);
+}
+
+.mood-link img {
+  flex: none;
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.mood-link:hover {
+  text-decoration: underline;
+}
+
+.home-panels {
+  display: grid;
+  align-items: start;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 22px;
+}
+
+.panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 10px;
+}
+
+/* featured article rows reuse .media-card--flat */
+.media-card--flat .media-title {
+  font-size: var(--fs-md);
+}
+
+/* community post cards */
+.post-card {
+  display: block;
+  padding: 12px 16px 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  margin-bottom: 12px;
+  text-decoration: none;
+  color: var(--brand);
+  background: rgba(255, 255, 255, 0.6);
+  transition: box-shadow 0.15s;
+}
+
+.post-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.post-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.post-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #b4cde0;
+}
+
+.post-user {
+  font-size: var(--fs-sm);
+  color: #6087b3;
+}
+
+.post-more {
+  margin-left: auto;
+  font-size: var(--fs-md);
+  line-height: 1;
+  letter-spacing: 2px;
+  color: #6087b3;
+}
+
+.post-card h3 {
+  margin: 8px 0 4px;
+  font-size: var(--fs-base);
+  font-weight: 700;
+}
+
+.post-card p {
+  font-size: var(--fs-sm);
+  color: #6087b3;
+}
+
+.post-foot {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+  font-size: var(--fs-xs);
+  color: #6087b3;
+}
+
+.post-foot span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.post-foot img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.post-foot time {
+  margin-left: auto;
+}
+
+@media (max-width: 1280px) {
+  .mood-card {
+    flex-basis: 400px;
+    width: 400px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .home-panels {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .page-hero .hero-mascot {
+    width: 150px;
+    margin-top: -60px;
+  }
+
+  .mood-card {
+    width: auto;
+    margin-right: var(--gutter);
+  }
+}
+
+@media (max-width: 640px) {
+  .page-hero .hero-intro {
+    flex-wrap: wrap;
+  }
+
+  .page-hero .hero-mascot {
+    width: 120px;
+    margin-top: -48px;
+  }
+
+  .mood-links {
+    grid-template-columns: 1fr;
+  }
+
+  .media-card--flat {
+    flex-direction: column;
+  }
+
+  .media-card--flat .media-media {
+    flex-basis: auto;
+    width: 100%;
+    height: 150px;
+  }
+}

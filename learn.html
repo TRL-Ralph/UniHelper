@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f3fbfd">
+  <meta name="description" content="Explore supportive, easy-to-understand mental health articles with UniHelper.">
+  <title>Learn | UniHelper</title>
+  <link rel="icon" type="image/png" href="assets/images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/learn.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/learn.js" defer></script>
+</head>
+<body data-page="learn">
+  <main class="main" id="main">
+    <section class="page-hero hero--library" id="learnHero" aria-labelledby="heroTitle">
+      <div class="hero-intro">
+        <div class="hero-icon" aria-hidden="true"><img src="assets/icons/learn.svg" alt=""></div>
+        <div>
+          <h1 id="heroTitle">Learn</h1>
+          <p>Explore trusted articles and resources to learn more about mental health.</p>
+        </div>
+      </div>
+      <aside class="hero-aside verified-card">
+        <img class="verified-icon" src="assets/icons/verified.svg" alt="">
+        <h2>Picked and reviewed by UniHelper moderators</h2>
+        <p>Articles are selected from trusted sources and carefully written to provide helpful, accurate, and supportive information.</p>
+      </aside>
+    </section>
+
+    <div class="container" id="libraryView">
+      <div class="chip-row" id="filterRow" role="group" aria-label="Filter articles by category"></div>
+
+      <div class="section-head featured-head" id="featuredHeading">
+        <span class="heading-icon"><img src="assets/icons/learn.svg" alt=""></span>
+        <h2>Featured Articles</h2>
+      </div>
+      <section class="card-grid featured-grid" id="featuredGrid" aria-label="Featured articles"></section>
+
+      <div class="section-head">
+        <span class="heading-icon"><img src="assets/icons/learn.svg" alt=""></span>
+        <h2 id="articlesHeading">More Articles</h2>
+        <span class="result-count" id="resultCount" aria-live="polite"></span>
+      </div>
+      <div class="card-grid article-grid" id="articleGrid"></div>
+      <p class="empty-state" id="emptyState" hidden>No articles found in this category yet.</p>
+    </div>
+
+    <article class="container article-view" id="articleView" hidden></article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f3fbfd">
+  <meta name="description" content="Guided exercises and a journal to help you take care of your mind, heart, and body.">
+  <title>Self-Care | UniHelper</title>
+  <link rel="icon" type="image/png" href="assets/images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/self-care.css">
+  <script src="js/app.js" defer></script>
+  <script src="js/self-care.js" defer></script>
+</head>
+<body data-page="selfcare">
+  <main class="main" id="main">
+    <section class="page-hero hero--aerial" aria-labelledby="careTitle">
+      <div class="hero-intro">
+        <div class="hero-icon" aria-hidden="true"><img src="assets/icons/plant.png" alt=""></div>
+        <div>
+          <h1 id="careTitle">Self-Care</h1>
+          <p>Take care of your mind, heart, and body with simple exercises and a space to reflect.</p>
+        </div>
+      </div>
+      <aside class="hero-aside journal-card" id="journal" aria-labelledby="journalTitle">
+        <h2 id="journalTitle">My Journal</h2>
+        <img class="journal-icon" src="assets/icons/journal.png" alt="">
+        <p>A safe place to share your thoughts, feelings, and dreams. Write freely and take some time for yourself.</p>
+        <button class="btn btn-bright btn-sm" type="button" data-wip>Start Journaling</button>
+      </aside>
+    </section>
+
+    <div class="container">
+      <section class="care-section" id="exercises" aria-labelledby="exercisesTitle">
+        <div class="section-head">
+          <span class="heading-icon"><img src="assets/icons/plant.png" alt=""></span>
+          <div>
+            <h2 id="exercisesTitle">Exercises</h2>
+            <p>Try these guided exercises to help you feel calmer, more focused, and more present.</p>
+          </div>
+          <button class="btn btn-bright btn-sm head-action" type="button" data-wip>View More</button>
+        </div>
+        <div class="chip-row" id="typeFilter" role="group" aria-label="Filter exercises by format">
+          <button class="chip selected" type="button" data-type="all" aria-pressed="true">All</button>
+          <button class="chip" type="button" data-type="guide" aria-pressed="false">Guides</button>
+          <button class="chip" type="button" data-type="audio" aria-pressed="false">Audio</button>
+          <span class="result-count" id="exerciseCount" aria-live="polite"></span>
+        </div>
+        <div class="card-grid care-grid" id="exerciseGrid">
+          <a class="media-card media-card--v" href="#" data-wip data-type="guide">
+            <span class="media-media"><img src="assets/images/Thumbnail.png" alt=""></span>
+            <span class="media-body">
+              <span class="media-title">5-Minute Breathing Exercise</span>
+              <span class="media-desc">Take a short break and reset your mind with this simple breathing technique.</span>
+              <span class="meta"><span class="meta-item"><img src="assets/icons/clock.png" alt="">5 min</span><span class="meta-item"><img src="assets/icons/guide.png" alt="">Guide</span></span>
+            </span>
+          </a>
+          <a class="media-card media-card--v" href="#" data-wip data-type="audio">
+            <span class="media-media"><img src="assets/images/Thumbnail.png" alt=""></span>
+            <span class="media-body">
+              <span class="media-title">Self-Compassion Meditation</span>
+              <span class="media-desc">Be kinder to yourself with guided meditation.</span>
+              <span class="meta"><span class="meta-item"><img src="assets/icons/clock.png" alt="">8 min</span><span class="meta-item"><img src="assets/icons/audio.png" alt="">Audio</span></span>
+            </span>
+          </a>
+          <a class="media-card media-card--v" href="#" data-wip data-type="guide">
+            <span class="media-media"><img src="assets/images/Thumbnail.png" alt=""></span>
+            <span class="media-body">
+              <span class="media-title">Focus &amp; Study Flow</span>
+              <span class="media-desc">Clear your mind and improve concentration with this short visualization.</span>
+              <span class="meta"><span class="meta-item"><img src="assets/icons/clock.png" alt="">5 min</span><span class="meta-item"><img src="assets/icons/guide.png" alt="">Guide</span></span>
+            </span>
+          </a>
+          <a class="media-card media-card--v" href="#" data-wip data-type="audio">
+            <span class="media-media"><img src="assets/images/Thumbnail.png" alt=""></span>
+            <span class="media-body">
+              <span class="media-title">Muscle Relaxation</span>
+              <span class="media-desc">Release tension and feel more at ease, body and mind.</span>
+              <span class="meta"><span class="meta-item"><img src="assets/icons/clock.png" alt="">8 min</span><span class="meta-item"><img src="assets/icons/audio.png" alt="">Audio</span></span>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <section class="care-section" aria-labelledby="stressTitle">
+        <div class="section-head">
+          <span class="heading-icon"><img src="assets/icons/plant.png" alt=""></span>
+          <div>
+            <h2 id="stressTitle">Stress Relief Techniques</h2>
+            <p>Quick and easy ways to manage stress in your daily life. Try these whenever you feel overwhelmed.</p>
+          </div>
+        </div>
+        <div class="card-grid side-grid">
+          <a class="media-card media-card--h" href="#" data-wip>
+            <span class="media-media"><img src="assets/images/Thumbnail.png" alt=""></span>
+            <span class="media-body">
+              <span class="media-title">The 4-7-8 Method</span>
+              <span class="media-desc">A simple breathing technique to calm your mind and body.</span>
+              <span class="meta"><span class="meta-item"><img src="assets/icons/clock.png" alt="">5 min</span><span class="meta-item"><img src="assets/icons/guide.png" alt="">Guide</span></span>
+            </span>
+          </a>
+          <a class="media-card media-card--h" href="#" data-wip>
+            <span class="media-media"><img src="assets/images/Thumbnail.png" alt=""></span>
+            <span class="media-body">
+              <span class="media-title">Positive Self-Talk</span>
+              <span class="media-desc">Replace negative thoughts with kinder, more supportive ones.</span>
+              <span class="meta"><span class="meta-item"><img src="assets/icons/clock.png" alt="">5 min</span><span class="meta-item"><img src="assets/icons/audio.png" alt="">Audio</span></span>
+            </span>
+          </a>
+          <a class="media-card media-card--h" href="#" data-wip>
+            <span class="media-media"><img src="assets/images/Thumbnail.png" alt=""></span>
+            <span class="media-body">
+              <span class="media-title">5-4-3-2-1 Grounding</span>
+              <span class="media-desc">Use your five senses to bring your attention back to the present.</span>
+              <span class="meta"><span class="meta-item"><img src="assets/icons/clock.png" alt="">4 min</span><span class="meta-item"><img src="assets/icons/guide.png" alt="">Guide</span></span>
+            </span>
+          </a>
+          <a class="media-card media-card--h" href="#" data-wip>
+            <span class="media-media"><img src="assets/images/Thumbnail.png" alt=""></span>
+            <span class="media-body">
+              <span class="media-title">Box Breathing</span>
+              <span class="media-desc">Breathe in a steady square pattern to slow a racing heart.</span>
+              <span class="meta"><span class="meta-item"><img src="assets/icons/clock.png" alt="">4 min</span><span class="meta-item"><img src="assets/icons/audio.png" alt="">Audio</span></span>
+            </span>
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
