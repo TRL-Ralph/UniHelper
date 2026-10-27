@@ -9,7 +9,7 @@
   <script>
     // Entry point: signed-in visitors go Home, everyone else to Login.
     var target = "login.html";
-    try { if (localStorage.getItem("unihelper.session")) target = "home.html"; } catch (e) {}
+    try { if (localStorage.getItem("unihelper.session")) target = "login.html"; } catch (e) {}
     window.location.replace(target);
   </script>
 </head>
