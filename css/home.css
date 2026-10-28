@@ -1,14 +1,25 @@
 /* Home — mood check-in, featured articles, recent posts */
 
+.page-hero .hero-intro {
+  position: relative;
+  padding-left: 150px;
+}
+
 .page-hero .hero-mascot {
-  width: 210px;
-  margin-top: -84px;
-  margin-bottom: -14px;
+  position: absolute;
+  bottom: 0px;
+  left: -35px;
+  width: 240px; /* change this freely */
+  margin: 0;
 }
 
 .page-hero .hero-intro {
   gap: 8px;
   padding-right: 36px;
+}
+
+.page-hero .hero-intro .btn {
+  margin-inline: auto;
 }
 
 .page-hero .hero-intro p {
@@ -18,7 +29,7 @@
 .mood-card {
   flex: 0 1 440px;
   width: 440px;
-  margin-right: clamp(0px, 4vw, 70px);
+  margin-right: clamp(0px, 4vw, 0px);
   text-align: left;
 }
 
@@ -244,25 +255,39 @@
 }
 
 @media (max-width: 900px) {
+  .page-hero .hero-intro {
+    position: relative;
+    padding-left: 100px;
+  }
+
   .page-hero .hero-mascot {
-    width: 150px;
-    margin-top: -60px;
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+    width: 215px; /* change this freely */
+    margin: 0;
   }
 
   .mood-card {
+    flex: none;
     width: auto;
     margin-right: var(--gutter);
+    margin-left: var(--gutter);
   }
 }
 
 @media (max-width: 640px) {
   .page-hero .hero-intro {
-    flex-wrap: wrap;
+    position: relative;
+    padding-left: 140px;
   }
 
   .page-hero .hero-mascot {
-    width: 120px;
-    margin-top: -48px;
+    position: absolute;
+    bottom: 0px;
+    left: -39px;
+    width: 215px; /* change this freely */
+    margin: 0;
   }
 
   .mood-links {
