@@ -13,7 +13,7 @@
       ]
     },
     good: {
-      title: "It’s nice to hear you’re doing well",
+      title: "It's nice to hear you're doing well",
       text: "Taking a moment to check in with yourself is already a healthy habit.",
       single: true,
       links: [
@@ -22,7 +22,7 @@
       ]
     },
     okay: {
-      title: "It’s okay to have an “okay” day",
+      title: "It's okay to have an “okay” day",
       text: "Not everyday has to be amazing. Just remember to take care of yourself.",
       links: [
         { label: "Stress Management", icon: "learn.svg", href: "learn.html#category/Stress" },
@@ -31,7 +31,7 @@
       ]
     },
     stressed: {
-      title: "I’m sorry things feel stressful right now",
+      title: "I'm sorry things feel stressful right now",
       text: "Try taking a short break, drinking some water, or practicing a quick breathing exercise.",
       links: [
         { label: "Breathing Exercises", icon: "self-care.svg", href: "self-care.html#exercises" },
@@ -110,7 +110,7 @@
 
     holder.innerHTML = featured.map((a) => `
       <a class="media-card media-card--h media-card--flat" href="learn.html#article/${a.id}">
-        <span class="media-media"><img src="assets/images/Thumbnail.png" alt=""></span>
+        <span class="media-media"><img src="assets/images/article-placeholder.jpg" alt=""></span>
         <span class="media-body">
           <span class="meta"><span class="pill" data-category="${a.category}">${UH.esc(a.category)}</span>${clock(a.readTime)}</span>
           <span class="media-title">${UH.esc(a.title)}</span>
