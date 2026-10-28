@@ -58,7 +58,7 @@ window.UH = window.UH || {};
       <div class="wip-box" role="dialog" aria-modal="true" aria-labelledby="wipTitle">
         <h2 id="wipTitle">Under Construction</h2>
         <div class="wip-text">
-          <p>Sorry! This feature isn’t available in the prototype just yet.</p>
+          <p>Sorry! This feature isn't available in the prototype just yet.</p>
           <p>We are still helping the team get everything ready, so this part of UniHelper is still under development.</p>
           <p>Thank you for your patience! (╥﹏╥)<br>- Umi</p>
         </div>
@@ -127,7 +127,7 @@ window.UH = window.UH || {};
         <img class="brand-logo" src="assets/images/logo.png" alt="">
         <span class="brand-copy">
           <span class="brand-name">UniHelper</span>
-          <span class="brand-tag">You’re not alone. UMak is with you.</span>
+          <span class="brand-tag">You're not alone. UMak is with you.</span>
         </span>
       </a>
       <img class="topbar-leaf" src="assets/icons/bell-leaf.svg" alt="" aria-hidden="true">

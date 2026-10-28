@@ -34,7 +34,7 @@
     const featured = UH.featuredArticleIds.map((id) => articles.find((a) => a.id === id)).filter(Boolean);
     featuredGrid.innerHTML = featured.map((a) => `
       <a class="media-card media-card--v" href="#article/${a.id}" aria-label="Read ${UH.esc(a.title)}">
-        <span class="media-media"><img src="assets/images/Thumbnail.png" alt="">
+        <span class="media-media"><img src="assets/images/article-placeholder.jpg" alt="">
           <span class="pill" data-category="${a.category}">${UH.esc(a.category)}</span></span>
         <span class="media-body">
           <span class="media-title">${UH.esc(a.title)}</span>
@@ -50,7 +50,7 @@
   function cardMarkup(a) {
     return `
       <a class="media-card media-card--h" href="#article/${a.id}" aria-label="Read ${UH.esc(a.title)}">
-        <span class="media-media"><img src="assets/images/Thumbnail.png" alt=""></span>
+        <span class="media-media"><img src="assets/images/article-placeholder.jpg" alt=""></span>
         <span class="media-body">
           <span class="pill" data-category="${a.category}">${UH.esc(a.category)}</span>
           <span class="media-title clamp-3">${UH.esc(a.title)}</span>
@@ -110,7 +110,7 @@
       </div>
       <h1 class="article-title">${UH.esc(article.title)}</h1>
       <p class="article-deck">${UH.esc(article.deck)}</p>
-      <img class="article-cover" src="assets/images/Thumbnail.png" alt="">
+      <img class="article-cover" src="assets/images/article-placeholder.jpg" alt="">
       <div class="article-body">
         ${sections}
         <div class="article-callout"><strong>A gentle reminder:</strong> You deserve support, and you do not have to figure everything out at once. Take what feels useful from this article and move at your own pace.</div>
