@@ -1,88 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#eef7fc">
-  <meta name="description" content="Log in to UniHelper, the student mental health support space for UMak.">
-  <title>Welcome | UniHelper</title>
-  <link rel="icon" type="image/png" href="assets/images/logo.svg">
+  <title>UniHelper - Log In</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/site.css">
-  <link rel="stylesheet" href="css/login.css">
-  <script src="js/app.js" defer></script>
-  <script src="js/login.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/auth.css">
+  <script src="js/auth.js" defer></script>
+  <link rel="stylesheet" href="css/welcome.css">
+  <script src="js/welcome.js" defer></script>
 </head>
-<body data-page="login" data-layout="bare">
-  <main class="login-page" id="main">
-    <section class="visual-panel" aria-hidden="true">
-      <img class="campus-image" src="assets/images/login.jpg" alt="" draggable="false">
-      <div class="visual-caption">
-        <p>You're not alone.</p>
-        <p>UMak is with you.</p>
-      </div>
-    </section>
 
-    <section class="form-panel">
-      <img class="leaf leaf-one" src="assets/icons/leaves.svg" alt="" aria-hidden="true">
-      <img class="leaf leaf-two" src="assets/icons/leaves.svg" alt="" aria-hidden="true">
-
-      <div class="login-content">
-        <header class="welcome">
-          <img class="login-logo" src="assets/images/logo.svg" alt="UniHelper logo">
-          <h1>Welcome!</h1>
-          <p>Log in to UniHelper.</p>
-        </header>
-
-        <form id="loginForm" class="login-form" novalidate>
-          <div class="field">
-            <div class="field-wrap">
-              <label class="sr-only" for="username">Username or Email</label>
-              <span class="field-icon" aria-hidden="true"><img src="assets/icons/envelope.png" alt="" width="18" height="18"></span>
-              <input id="username" name="username" type="text" placeholder="Username or Email" autocomplete="username" aria-describedby="usernameError" required>
-            </div>
-            <p class="field-error" id="usernameError" aria-live="polite"></p>
+<body>
+  <img class="auth-bg" src="assets/images/loginBackground.png">
+  <main class="auth-page">
+    <section class="auth-card">
+      <header class="auth-head">
+        <img class="auth-logo" src="assets/images/logo.svg">
+        <div class="auth-title">
+          <img class="laurel laurel-left" src="assets/icons/laurelLeft.png">
+          <h1>Welcome Back!</h1>
+          <p>Log in to UniHelper</p>
+          <img class="laurel laurel-right" src="assets/icons/laurelRight.png">
+        </div>
+      </header>
+      <form class="auth-form" id="loginForm" novalidate>
+        <div class="field">
+          <div class="field-wrap">
+            <img class="field-icon" src="assets/icons/envelopeIcon.png">
+            <input id="username" type="text" placeholder="Username or Email" autocomplete="username">
           </div>
-
-          <div class="field">
-            <div class="field-wrap">
-              <label class="sr-only" for="password">Password</label>
-              <span class="field-icon" aria-hidden="true"><img src="assets/icons/lock.png" alt="" width="18" height="18"></span>
-              <input id="password" name="password" type="password" placeholder="Password" autocomplete="current-password" aria-describedby="passwordError" required>
-              <button class="password-toggle" type="button" id="togglePassword" aria-label="Show password" aria-pressed="false">
-                <svg class="eye-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12s3.4-6 9.5-6 9.5 6 9.5 6-3.4 6-9.5 6-9.5-6-9.5-6Z"></path><circle cx="12" cy="12" r="2.7"></circle><path class="eye-slash" d="M4 4 20 20"></path></svg>
-              </button>
-            </div>
-            <p class="field-error" id="passwordError" aria-live="polite"></p>
+          <p class="field-error"></p>
+        </div>
+        <div class="field">
+          <div class="field-wrap">
+            <img class="field-icon" src="assets/icons/lockIcon.png">
+            <input id="password" type="password" placeholder="Password" autocomplete="current-password">
+            <button class="eye-toggle" type="button" aria-label="Show password"><svg class="eye-icon"
+                viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12Z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+                <path class="eye-slash" d="M4 5l16 14"></path>
+              </svg></button>
           </div>
-
-          <div class="form-meta"><a href="#" data-wip>Forgot password?</a></div>
-
-          <button class="btn btn-block btn-lg" type="submit">
-            <span>Log In</span>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 5l7 7-7 7"></path></svg>
-          </button>
-
-          <div class="or-divider" aria-hidden="true"><span></span><small>or</small><span></span></div>
-
-          <button class="university-button" type="button" data-wip>
-            <img src="assets/images/university-emblem.png" alt="" aria-hidden="true">
-            <span>University of Makati Email</span>
-          </button>
-
-          <button class="guest-link" type="button" id="guestLogin">Log in as Guest</button>
-          <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-
-      <footer class="page-footer">
-        <span class="heart" aria-hidden="true">♡</span>
-        <i>Your mental health matters.</i>
-        <img src="assets/icons/leaf.svg" alt="" aria-hidden="true">
-      </footer>
+          <p class="field-error"></p>
+        </div>
+        <div class="form-row">
+          <label class="remember"><input type="checkbox" id="remember"><span class="box"></span>Remember Me</label>
+          <a class="forgot" href="#" data-wip>Forgot password?</a>
+        </div>
+        <button class="auth-button" type="submit">Log In<img src="assets/icons/arrowWhite.png"></button>
+        <div class="or-divider"><span></span><small>or</small><span></span></div>
+        <button class="university-button" type="button" data-wip><img
+            src="assets/images/university-emblem.png">University of Makati Email</button>
+        <p class="switch">Don’t have an account? <a href="signup.html">Sign up<img src="assets/icons/arrowBlue.png"></a>
+        </p>
+        <a class="guest" href="#" id="guestLogin">Sign in as Guest</a>
+      </form>
     </section>
   </main>
+  <div class="wip-backdrop" id="wipModal">
+    <div class="wip-box" role="dialog" aria-modal="true" aria-labelledby="wipTitle">
+      <h2 id="wipTitle">Under Construction</h2>
+      <div class="wip-text">
+        <p>Sorry! This feature isn’t available in the prototype just yet.</p>
+        <p>We are still helping the team get everything ready, so this part of UniHelper is still under
+          development.</p>
+        <p>Thank you for your patience! (╥﹏╥)<br>- Umi</p>
+      </div>
+      <button class="wip-back" id="wipBack" type="button">Back</button>
+      <img class="wip-mascot" src="assets/images/mascot.png">
+    </div>
+  </div>
 </body>
+
 </html>
