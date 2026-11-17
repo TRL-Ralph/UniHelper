@@ -17,6 +17,18 @@
   const hero = document.getElementById("learnHero");
   const filterRow = document.getElementById("filterRow");
 
+  // Fisher-Yates shuffle. Done once per page load so the order stays steady while
+  // switching tags, and is mixed up again on the next visit/refresh.
+  const shuffle = (list) => {
+    const copy = list.slice();
+    for (let i = copy.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [copy[i], copy[j]] = [copy[j], copy[i]];
+    }
+    return copy;
+  };
+  const shuffled = shuffle(articles);
+
   const CATEGORIES = ["All", ...UH.articleCategories];
   const BASE_TITLE = document.title;
   let activeCategory = "All";
@@ -34,10 +46,10 @@
     const featured = UH.featuredArticleIds.map((id) => articles.find((a) => a.id === id)).filter(Boolean);
     featuredGrid.innerHTML = featured.map((a) => `
       <a class="media-card media-card--v" href="#article/${a.id}" aria-label="Read ${UH.esc(a.title)}">
-        <span class="media-media"><img src="assets/images/article-placeholder.jpg" alt="">
+        <span class="media-media">${UH.articleImg(a)}
           <span class="pill" data-category="${a.category}">${UH.esc(a.category)}</span></span>
         <span class="media-body">
-          <span class="media-title">${UH.esc(a.title)}</span>
+          <span class="media-title clamp-2">${UH.esc(a.title)}</span>
           <span class="media-desc clamp-3">${UH.esc(a.deck)}</span>
           <span class="meta">${clock(a.readTime)}</span>
         </span>
@@ -50,7 +62,7 @@
   function cardMarkup(a) {
     return `
       <a class="media-card media-card--h" href="#article/${a.id}" aria-label="Read ${UH.esc(a.title)}">
-        <span class="media-media"><img src="assets/images/article-placeholder.jpg" alt=""></span>
+        <span class="media-media">${UH.articleImg(a)}</span>
         <span class="media-body">
           <span class="pill" data-category="${a.category}">${UH.esc(a.category)}</span>
           <span class="media-title clamp-3">${UH.esc(a.title)}</span>
@@ -60,7 +72,11 @@
   }
 
   function renderCards() {
-    const visible = activeCategory === "All" ? articles : articles.filter((a) => a.category === activeCategory);
+    // "All" skips the articles already shown under Featured; a tag lists everything in that category.
+    const featuredIds = new Set(UH.featuredArticleIds);
+    const visible = activeCategory === "All"
+      ? shuffled.filter((a) => !featuredIds.has(a.id))
+      : shuffled.filter((a) => a.category === activeCategory);
     grid.innerHTML = visible.map(cardMarkup).join("");
     resultCount.textContent = `${visible.length} ${visible.length === 1 ? "article" : "articles"}`;
     emptyState.hidden = visible.length !== 0;
@@ -110,7 +126,7 @@
       </div>
       <h1 class="article-title">${UH.esc(article.title)}</h1>
       <p class="article-deck">${UH.esc(article.deck)}</p>
-      <img class="article-cover" src="assets/images/article-placeholder.jpg" alt="">
+      ${UH.articleImg(article).replace("<img ", '<img class="article-cover" ')}
       <div class="article-body">
         ${sections}
         <div class="article-callout"><strong>A gentle reminder:</strong> You deserve support, and you do not have to figure everything out at once. Take what feels useful from this article and move at your own pace.</div>
