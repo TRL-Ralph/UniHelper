@@ -169,3 +169,20 @@
     line-height: 1.8;
   }
 }
+
+.article-source {
+  margin: 1.25rem 0 0;
+  font-size: 0.9rem;
+  color: var(--muted, #5b6470);
+}
+
+.article-source a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.article-source-url {
+  font-size: 0.8rem;
+  word-break: break-all;
+  opacity: 0.8;
+}
