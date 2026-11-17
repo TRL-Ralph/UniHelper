@@ -5,10 +5,17 @@
 
 window.UH = window.UH || {};
 
+/* ARTICLE IMAGES
+   Each article has an `image` field. Put your picture in assets/images/articles/
+   and type its file name here, e.g.  image: "stress-desk.jpg".
+   That one value is used everywhere the article appears: the Featured cards,
+   the More Articles list, the reader's cover (Learn) and Home's Featured list.
+   Leave it "" (or if the file is missing) to show the default placeholder.
+   You can also paste a full path/URL (assets/..., https://..., data:...). */
 UH.articles = [
   {
     id: "handling-life-stressors", category: "Stress", title: "Healthy Ways to Handle Life's Stressors",
-    readTime: 4, image: "article-cover.jpg",
+    readTime: 4, image: "",
     source: { name: "American Psychological Association", url: "https://www.apa.org/topics/stress/tips" },
     deck: "Stress is a normal survival response, but a mix of evidence-based habits can keep it from wearing you down.",
     sections: [
@@ -22,7 +29,7 @@ UH.articles = [
   },
   {
     id: "managing-stress", category: "Stress", title: "Managing Stress Day to Day",
-    readTime: 4, image: "article-cover.jpg",
+    readTime: 4, image: "",
     source: { name: "Centers for Disease Control and Prevention (CDC)", url: "https://www.cdc.gov/mental-health/living-with/index.html" },
     deck: "Everyone feels stress, and a few small daily habits for your mind and body can stop it from building up.",
     sections: [
@@ -36,7 +43,7 @@ UH.articles = [
   },
   {
     id: "stress-four-options", category: "Stress", title: "The Four A's of Stress Management",
-    readTime: 4, image: "article-cover.jpg",
+    readTime: 4, image: "",
     source: { name: "HelpGuide.org", url: "https://www.helpguide.org/mental-health/stress/stress-management" },
     deck: "When stress hits, you can avoid it, alter it, adapt to it, or accept it. Choosing the right option helps.",
     sections: [
@@ -50,7 +57,7 @@ UH.articles = [
   },
   {
     id: "improving-self-esteem", category: "Self-Esteem", title: "How Can I Improve My Self-Esteem?",
-    readTime: 4, image: "article-cover.jpg",
+    readTime: 4, image: "",
     source: { name: "Nemours KidsHealth", url: "https://kidshealth.org/en/teens/self-esteem.html" },
     deck: "Self-esteem means feeling good about yourself, and there are practical ways to build it, one habit at a time.",
     sections: [
@@ -64,7 +71,7 @@ UH.articles = [
   },
   {
     id: "confidence-and-self-esteem", category: "Self-Esteem", title: "Understanding Confidence and Self-Esteem",
-    readTime: 4, image: "article-cover.jpg",
+    readTime: 4, image: "",
     source: { name: "Mind", url: "https://www.mind.org.uk/for-young-people/feelings-and-experiences/confidence-and-self-esteem/" },
     deck: "Confidence and self-esteem are linked to your mental health, and struggling with them sometimes is common.",
     sections: [
@@ -77,7 +84,7 @@ UH.articles = [
   },
   {
     id: "what-is-self-esteem", category: "Self-Esteem", title: "What Is Self-Esteem?",
-    readTime: 4, image: "article-cover.jpg",
+    readTime: 4, image: "",
     source: { name: "Verywell Mind", url: "https://www.verywellmind.com/what-is-self-esteem-2795868" },
     deck: "Self-esteem is your overall sense of personal worth, and both too little and too much can cause problems.",
     sections: [
@@ -91,7 +98,7 @@ UH.articles = [
   },
   {
     id: "what-is-wellness", category: "Wellness", title: "What Is Wellness?",
-    readTime: 4, image: "article-cover.jpg",
+    readTime: 4, image: "",
     source: { name: "Global Wellness Institute", url: "https://globalwellnessinstitute.org/what-is-wellness/" },
     deck: "Wellness is something you actively practice through your choices and habits, and it covers much more than physical health.",
     sections: [
@@ -104,7 +111,7 @@ UH.articles = [
   },
   {
     id: "dimensions-of-wellness", category: "Wellness", title: "Dimensions of Wellness: Change Your Habits, Change Your Life",
-    readTime: 4, image: "article-cover.jpg",
+    readTime: 4, image: "",
     source: { name: "Stoewen, Canadian Veterinary Journal (via NIH/PMC)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5508938/" },
     deck: "Wellness has eight connected dimensions, and habits are what make lasting change possible.",
     sections: [
@@ -118,7 +125,7 @@ UH.articles = [
   },
   {
     id: "healthy-relationships", category: "Relationships", title: "Healthy Relationships and Mental Wellbeing",
-    readTime: 4, image: "article-cover.jpg",
+    readTime: 4, image: "",
     source: { name: "NHS Every Mind Matters", url: "https://www.nhs.uk/every-mind-matters/lifes-challenges/maintaining-healthy-relationships-and-mental-wellbeing/" },
     deck: "Relationships, including the one you have with yourself, are vital to wellbeing, and good ones take effort.",
     sections: [
@@ -132,7 +139,7 @@ UH.articles = [
   },
   {
     id: "self-improvement-guide", category: "Self-Growth", title: "A Beginner's Guide to Continuous Self-Improvement",
-    readTime: 3, image: "article-cover.jpg",
+    readTime: 3, image: "",
     source: { name: "James Clear", url: "https://jamesclear.com/self-improvement" },
     deck: "Self-improvement starts with honest self-awareness and the ability to change your habits, one small system at a time.",
     sections: [
@@ -145,7 +152,7 @@ UH.articles = [
   },
   {
     id: "self-improvement-strategies", category: "Self-Growth", title: "Unlocking Your Potential: Self-Improvement Strategies",
-    readTime: 4, image: "article-cover.jpg",
+    readTime: 4, image: "",
     source: { name: "Thriveworks", url: "https://thriveworks.com/help-with/self-improvement/self-improvement-strategies/" },
     deck: "Self-improvement is a deliberate, lifelong process, and there are practical tools for goals, confidence, and resilience.",
     sections: [
@@ -159,7 +166,7 @@ UH.articles = [
   },
   {
     id: "what-is-a-relationship", category: "Relationships", title: "What Is a Relationship?",
-    readTime: 4, image: "article-cover.jpg",
+    readTime: 4, image: "",
     source: { name: "MyTherapist.ie (written by Dr Elaine Ryan, PsychD)", url: "https://mytherapist.ie/relationships/what-is-a-relationship/" },
     deck: "A relationship is any connection between people, not only romance, and your relationship with yourself matters too.",
     sections: [
@@ -172,7 +179,7 @@ UH.articles = [
   },
   {
     id: "social-connections-for-mental-wellbeing", category: "Relationships", title: "Social Connections for Mental Wellbeing",
-    readTime: 3, image: "article-cover.jpg",
+    readTime: 3, image: "",
     source: { name: "NHS Inform (Scotland)", url: "https://www.nhsinform.scot/healthy-living/mental-wellbeing/social-connections-for-mental-wellbeing" },
     deck: "Feeling connected to family, friends, and your community can make you feel happier, more secure, and more like you belong.",
     sections: [
@@ -185,7 +192,7 @@ UH.articles = [
   },
   {
     id: "how-to-improve-your-wellness", category: "Wellness", title: "How to Improve Your Wellness",
-    readTime: 5, image: "article-cover.jpg",
+    readTime: 5, image: "",
     source: { name: "Psychology Today (posted 17 September 2018, reviewed by Ekua Hagan)", url: "https://www.psychologytoday.com/us/blog/modern-mentality/201809/how-improve-your-wellness" },
     deck: "Wellness is more than being free of illness. Looking at its many areas can help you improve your health and mood.",
     sections: [
@@ -199,7 +206,7 @@ UH.articles = [
   },
   {
     id: "six-tips-for-self-growth", category: "Self-Growth", title: "Six Tips for Self-Growth",
-    readTime: 4, image: "article-cover.jpg",
+    readTime: 4, image: "",
     source: { name: "Psychology Today (by Zamfira Parincu and Tchiki Davis, PhD)", url: "https://www.psychologytoday.com/us/blog/click-here-for-happiness/202309/six-tips-for-self-growth" },
     deck: "Self-growth means building new skills and attitudes that improve your life, and small daily practices can help you start.",
     sections: [
@@ -214,6 +221,19 @@ UH.articles = [
 ];
 
 UH.featuredArticleIds = ["handling-life-stressors", "improving-self-esteem", "healthy-relationships"];
+
+UH.ARTICLE_IMAGE_DIR = "assets/images/articles/";
+UH.ARTICLE_FALLBACK_IMAGE = "assets/images/article-placeholder.jpg";
+
+UH.articleImageSrc = (article) => {
+  const file = String(article.image || "").trim();
+  if (!file) return UH.ARTICLE_FALLBACK_IMAGE;
+  return /^(https?:|data:|assets\/|\/)/.test(file) ? file : UH.ARTICLE_IMAGE_DIR + file;
+};
+
+// <img> markup for an article's picture; falls back to the placeholder if the file is missing.
+UH.articleImg = (article) =>
+  `<img src="${UH.articleImageSrc(article).replace(/"/g, "&quot;")}" alt="" loading="lazy" onerror="this.onerror=null;this.src='${UH.ARTICLE_FALLBACK_IMAGE}'">`;
 
 UH.articleCategories = ["Stress", "Self-Esteem", "Wellness", "Relationships", "Self-Growth"];
 

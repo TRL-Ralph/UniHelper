@@ -110,7 +110,7 @@
 
     holder.innerHTML = featured.map((a) => `
       <a class="media-card media-card--h media-card--flat" href="learn.html#article/${a.id}">
-        <span class="media-media"><img src="assets/images/article-placeholder.jpg" alt=""></span>
+        <span class="media-media">${UH.articleImg(a)}</span>
         <span class="media-body">
           <span class="meta"><span class="pill" data-category="${a.category}">${UH.esc(a.category)}</span>${clock(a.readTime)}</span>
           <span class="media-title">${UH.esc(a.title)}</span>

@@ -58,6 +58,18 @@
   font-size: var(--fs-md);
 }
 
+/* Uniform card sizes: every card in a grid is the same height no matter how long
+   its title is or which tag is selected. Long text is clamped instead of growing. */
+.featured-grid .media-card--v {
+  height: 350px;
+}
+
+.article-grid .media-card--h,
+.related .media-card--h {
+  height: 156px;
+  min-height: 0;
+}
+
 /* ---------- article reader ---------- */
 .article-view {
   max-width: 1000px;
