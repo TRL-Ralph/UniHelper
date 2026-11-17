@@ -114,6 +114,7 @@
       <div class="article-body">
         ${sections}
         <div class="article-callout"><strong>A gentle reminder:</strong> You deserve support, and you do not have to figure everything out at once. Take what feels useful from this article and move at your own pace.</div>
+        ${article.source ? `<p class="article-source"><strong>Source:</strong> ${UH.esc(article.source.name)}. Summarized in our own words. <a href="${UH.esc(article.source.url)}" target="_blank" rel="noopener">Read the original article</a><br><span class="article-source-url">${UH.esc(article.source.url)}</span></p>` : ""}
         <p class="article-disclaimer">This article is for general educational purposes only. It is not a diagnosis or a substitute for individualized advice from a qualified mental health professional. If you are concerned about your well-being, consider speaking with a trusted professional or support person.</p>
       </div>
       ${related.length ? `<aside class="related"><div class="section-head"><h2>More in ${UH.esc(article.category)}</h2></div>
