@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,13 +13,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/site.css">
   <link rel="stylesheet" href="css/learn.css">
+  <link rel="stylesheet" href="css/common.css">
   <script src="js/data.js" defer></script>
   <script src="js/app.js" defer></script>
   <script src="js/learn.js" defer></script>
 </head>
+
 <body data-page="learn">
   <main class="main" id="main">
-    <section class="page-hero hero--library" id="learnHero" aria-labelledby="heroTitle">
+    <section class="page-hero hero--library noselect" id="learnHero" aria-labelledby="heroTitle">
       <div class="hero-intro">
         <div class="hero-icon" aria-hidden="true"><img src="assets/icons/learn.svg" alt=""></div>
         <div>
@@ -27,9 +30,11 @@
         </div>
       </div>
       <aside class="hero-aside verified-card">
-        <img class="verified-icon" src="assets/icons/verified.svg" alt="">
-        <h2>Picked and reviewed by UniHelper moderators</h2>
-        <p>Articles are selected from trusted sources and carefully written to provide helpful, accurate, and supportive information.</p>
+        <img class="verified-icon noselect" src="assets/icons/verified.svg" alt="">
+        <h2 class="noselect">Picked and reviewed by UniHelper moderators</h2>
+        <p class="noselect">Articles are selected from trusted sources and carefully written to provide helpful,
+          accurate, and supportive
+          information.</p>
       </aside>
     </section>
 
@@ -37,15 +42,15 @@
       <div class="chip-row" id="filterRow" role="group" aria-label="Filter articles by category"></div>
 
       <div class="section-head featured-head" id="featuredHeading">
-        <span class="heading-icon"><img src="assets/icons/learn.svg" alt=""></span>
-        <h2>Featured Articles</h2>
+        <span class="heading-icon"><img class="noselect" src="assets/icons/learn.svg" alt=""></span>
+        <h2 class="noselect">Featured Articles</h2>
       </div>
       <section class="card-grid featured-grid" id="featuredGrid" aria-label="Featured articles"></section>
 
       <div class="section-head">
-        <span class="heading-icon"><img src="assets/icons/learn.svg" alt=""></span>
-        <h2 id="articlesHeading">More Articles</h2>
-        <span class="result-count" id="resultCount" aria-live="polite"></span>
+        <span class="heading-icon"><img class="noselect" src="assets/icons/learn.svg" alt=""></span>
+        <h2 class="noselect" id="articlesHeading">More Articles</h2>
+        <span class="result-count noselect" id="resultCount" aria-live="polite"></span>
       </div>
       <div class="card-grid article-grid" id="articleGrid"></div>
       <p class="empty-state" id="emptyState" hidden>No articles found in this category yet.</p>
@@ -54,4 +59,5 @@
     <article class="container article-view" id="articleView" hidden></article>
   </main>
 </body>
+
 </html>

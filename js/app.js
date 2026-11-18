@@ -83,14 +83,14 @@ window.UH = window.UH || {};
     wipModal.id = "wipModal";
     wipModal.innerHTML = `
       <div class="wip-box" role="dialog" aria-modal="true" aria-labelledby="wipTitle">
-        <h2 id="wipTitle">Under Construction</h2>
-        <div class="wip-text">
+        <h2 class="noselect" id="wipTitle">Under Construction</h2>
+        <div class="wip-text noselect">
           <p>Sorry! This feature isn't available in the prototype just yet.</p>
           <p>We are still helping the team get everything ready, so this part of UniHelper is still under development.</p>
           <p>Thank you for your patience! (╥﹏╥)<br>- Umi</p>
         </div>
-        <button class="btn wip-back" id="wipBack" type="button">Back</button>
-        <img class="wip-mascot" src="assets/images/mascot.png" alt="">
+        <button class="btn wip-back noselect" id="wipBack" type="button">Back</button>
+        <img class="wip-mascot noselect" src="assets/images/mascot.png" alt="">
       </div>`;
     body.appendChild(wipModal);
     wipBack = wipModal.querySelector("#wipBack");
