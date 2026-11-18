@@ -7,48 +7,109 @@
       title: "I'm glad you're having a great day!",
       text: "Keep taking care of yourself, and remember to cherish even the smallest of good moments.",
       links: [
-        { label: "Mental Wellness tips", icon: "self-care.svg", href: "self-care.html" },
-        { label: "Positive Articles", icon: "learn.svg", href: "learn.html#category/Wellness" },
-        { label: "Encourage Someone", icon: "community.svg", href: "peer-support.html" }
-      ]
+        {
+          label: "Self-Care tips",
+          icon: "self-care.svg",
+          href: "self-care.html",
+        },
+        {
+          label: "Positive Articles",
+          icon: "learn.svg",
+          href: "learn.html#category/Wellness",
+        },
+        {
+          label: "Encourage Someone",
+          icon: "community.svg",
+          href: "peer-support.html",
+        },
+      ],
     },
     good: {
       title: "It's nice to hear you're doing well",
       text: "Taking a moment to check in with yourself is already a healthy habit.",
       single: true,
       links: [
-        { label: "Daily Reflection", icon: "self-care.svg", href: "self-care.html#journal" },
-        { label: "Wellness Articles", icon: "learn.svg", href: "learn.html#category/Wellness" }
-      ]
+        {
+          label: "Daily Reflection",
+          icon: "self-care.svg",
+          href: "self-care.html#journal",
+        },
+        {
+          label: "Wellness Articles",
+          icon: "learn.svg",
+          href: "learn.html#category/Wellness",
+        },
+      ],
     },
     okay: {
       title: "It's okay to have an “okay” day",
       text: "Not everyday has to be amazing. Just remember to take care of yourself.",
       links: [
-        { label: "Stress Management", icon: "learn.svg", href: "learn.html#category/Stress" },
-        { label: "Mental Wellness Tips", icon: "self-care.svg", href: "self-care.html" },
-        { label: "Breathing Exercises", icon: "self-care.svg", href: "self-care.html#exercises" }
-      ]
+        {
+          label: "Stress Management",
+          icon: "learn.svg",
+          href: "learn.html#category/Stress",
+        },
+        {
+          label: "Self-Care Tips",
+          icon: "self-care.svg",
+          href: "self-care.html",
+        },
+        {
+          label: "Breathing Exercises",
+          icon: "self-care.svg",
+          href: "self-care.html#exercises",
+        },
+      ],
     },
     stressed: {
       title: "I'm sorry things feel stressful right now",
       text: "Try taking a short break, drinking some water, or practicing a quick breathing exercise.",
       links: [
-        { label: "Breathing Exercises", icon: "self-care.svg", href: "self-care.html#exercises" },
-        { label: "Share Experience", icon: "community.svg", href: "peer-support.html" },
-        { label: "Managing Stress", icon: "learn.svg", href: "learn.html#category/Stress" },
-        { label: "Peer Support", icon: "get-help.svg", href: "peer-support.html" }
-      ]
+        {
+          label: "Breathing Exercises",
+          icon: "self-care.svg",
+          href: "self-care.html#exercises",
+        },
+        {
+          label: "Share Experience",
+          icon: "community.svg",
+          href: "peer-support.html",
+        },
+        {
+          label: "Managing Stress",
+          icon: "learn.svg",
+          href: "learn.html#category/Stress",
+        },
+        {
+          label: "Peer Support",
+          icon: "get-help.svg",
+          href: "peer-support.html",
+        },
+      ],
     },
     sad: {
       title: "I'm sorry you're feeling this way today.",
       text: "You don't have to go through difficult moments alone.",
       links: [
-        { label: "Professional Support", icon: "get-help.svg", href: "#", wip: true },
-        { label: "Mental Wellness Tips", icon: "self-care.svg", href: "self-care.html" },
-        { label: "Peer Support", icon: "get-help.svg", href: "peer-support.html" }
-      ]
-    }
+        {
+          label: "Professional Support",
+          icon: "get-help.svg",
+          href: "#",
+          wip: true,
+        },
+        {
+          label: "Self-Care Tips",
+          icon: "self-care.svg",
+          href: "self-care.html",
+        },
+        {
+          label: "Peer Support",
+          icon: "get-help.svg",
+          href: "peer-support.html",
+        },
+      ],
+    },
   };
 
   function initMood() {
@@ -79,9 +140,13 @@
 
       const links = document.getElementById("moodLinks");
       links.className = "mood-links" + (data.single ? " single" : "");
-      links.innerHTML = data.links.map((item) =>
-        `<a class="mood-link" href="${item.href}"${item.wip ? " data-wip" : ""}>
-           <img src="assets/icons/${item.icon}" alt="">${UH.esc(item.label)}</a>`).join("");
+      links.innerHTML = data.links
+        .map(
+          (item) =>
+            `<a class="mood-link noselect" href="${item.href}"${item.wip ? " data-wip" : ""}>
+           <img src="assets/icons/${item.icon}" alt="">${UH.esc(item.label)}</a>`,
+        )
+        .join("");
 
       pick.hidden = true;
       response.hidden = false;
@@ -90,12 +155,14 @@
     });
 
     doneButton.addEventListener("click", () => {
-      const card = response.closest(".mood-card");
-      card.style.maxHeight = card.offsetHeight + "px"; // max-height can't animate from "none"
-      card.classList.add("fading");
-      card.addEventListener("animationend", (e) => {
-        if (e.animationName === "mood-collapse") card.remove();
+      response.hidden = true;
+      pick.hidden = false;
+      selected = null;
+      options.forEach((option) => {
+        option.classList.remove("selected");
+        option.setAttribute("aria-pressed", "false");
       });
+      confirmButton.disabled = true;
     });
   }
 
@@ -109,15 +176,19 @@
       .map((id) => UH.articles.find((a) => a.id === id))
       .filter(Boolean);
 
-    holder.innerHTML = featured.map((a) => `
-      <a class="media-card media-card--h media-card--flat" href="learn.html#article/${a.id}">
+    holder.innerHTML = featured
+      .map(
+        (a) => `
+      <a class="media-card media-card--h media-card--flat noselect" href="learn.html#article/${a.id}">
         <span class="media-media">${UH.articleImg(a)}</span>
         <span class="media-body">
           <span class="meta"><span class="pill" data-category="${a.category}">${UH.esc(a.category)}</span>${clock(a.readTime)}</span>
           <span class="media-title">${UH.esc(a.title)}</span>
           <span class="media-desc clamp-2">${UH.esc(a.deck)}</span>
         </span>
-      </a>`).join("");
+      </a>`,
+      )
+      .join("");
   }
 
   function tagLabel(key) {
@@ -127,10 +198,12 @@
 
   function renderPosts() {
     const holder = document.getElementById("homePosts");
-    holder.innerHTML = UH.threads.slice(0, 3).map((t) => {
-      const label = tagLabel(t.tags[0]);
-      return `
-      <a class="post-card" href="peer-support.html#thread-${t.id}">
+    holder.innerHTML = UH.threads
+      .slice(0, 3)
+      .map((t) => {
+        const label = tagLabel(t.tags[0]);
+        return `
+      <a class="post-card noselect" href="peer-support.html#thread-${t.id}">
         <div class="post-top">
           <img class="post-avatar" src="assets/icons/avatar.svg" alt="">
           <span class="post-user">Anonymous</span>
@@ -146,7 +219,8 @@
           <time>${UH.esc(t.ago)}</time>
         </div>
       </a>`;
-    }).join("");
+      })
+      .join("");
   }
 
   initMood();
