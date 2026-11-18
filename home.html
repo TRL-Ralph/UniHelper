@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +16,10 @@
   <script src="js/data.js" defer></script>
   <script src="js/app.js" defer></script>
   <script src="js/home.js" defer></script>
+  <link rel="stylesheet" href="css/welcome.css">
+  <script src="js/welcome.js" defer></script>
 </head>
+
 <body data-page="home">
   <main class="main" id="main">
     <section class="page-hero hero--campus" aria-labelledby="homeTitle">
@@ -24,7 +28,8 @@
         <div>
           <h1 id="homeTitle">Hi, I'm Umi!</h1>
           <p>This is a safe space for UMak students to share, learn, and find support. Because you matter.</p>
-          <a class="btn btn-sm" href="#" data-wip>Learn more about UniHelper <img src="assets/icons/arrow-white.svg" alt=""></a>
+          <a class="btn btn-sm" href="#" data-wip>Learn more about UniHelper <img src="assets/icons/arrow-white.svg"
+              alt=""></a>
         </div>
       </div>
 
@@ -32,11 +37,16 @@
         <div id="moodPick">
           <h2>How are you feeling today?</h2>
           <div class="mood-options" role="group" aria-label="Choose your mood">
-            <button class="mood-option" type="button" data-mood="great"><img src="assets/mood/great.svg" alt=""><span>Great</span></button>
-            <button class="mood-option" type="button" data-mood="good"><img src="assets/mood/good.svg" alt=""><span>Good</span></button>
-            <button class="mood-option" type="button" data-mood="okay"><img src="assets/mood/okay.svg" alt=""><span>Okay</span></button>
-            <button class="mood-option" type="button" data-mood="stressed"><img src="assets/mood/stressed.svg" alt=""><span>Stressed</span></button>
-            <button class="mood-option" type="button" data-mood="sad"><img src="assets/mood/sad.svg" alt=""><span>Sad</span></button>
+            <button class="mood-option" type="button" data-mood="great"><img src="assets/mood/great.svg"
+                alt=""><span>Great</span></button>
+            <button class="mood-option" type="button" data-mood="good"><img src="assets/mood/good.svg"
+                alt=""><span>Good</span></button>
+            <button class="mood-option" type="button" data-mood="okay"><img src="assets/mood/okay.svg"
+                alt=""><span>Okay</span></button>
+            <button class="mood-option" type="button" data-mood="stressed"><img src="assets/mood/stressed.svg"
+                alt=""><span>Stressed</span></button>
+            <button class="mood-option" type="button" data-mood="sad"><img src="assets/mood/sad.svg"
+                alt=""><span>Sad</span></button>
           </div>
           <button class="btn btn-sm mood-confirm" id="moodConfirm" type="button" disabled>Confirm</button>
         </div>
@@ -71,4 +81,5 @@
     </div>
   </main>
 </body>
+
 </html>
