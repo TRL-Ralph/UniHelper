@@ -7,10 +7,7 @@
 /* ---------- 1. Tokens ---------------------------------------------------- */
 :root {
   /* Font: Playpen Sans everywhere */
-  --font: "Playpen Sans",
-          "Trebuchet MS",
-          Arial,
-          sans-serif;
+  --font: "Playpen Sans", "Trebuchet MS", Arial, sans-serif;
 
   /* Type scale (rem). Change a value here and it updates the whole site. */
   --fs-xs: 0.75rem; /* 12px  tags, captions            */
@@ -96,8 +93,8 @@ body[data-page="help"],
   --c-icon: #8fd3a8;
 }
 
-body[data-page="selfcare"],
-.nav-selfcare {
+body[data-page="mental-wellness"],
+.nav-mental-wellness {
   --c-bg: #fef4db;
   --c-bd: #ffebbd;
   --c-ink: #3c2804;
@@ -279,8 +276,9 @@ body.no-scroll {
   border-radius: 2px;
   margin: 4px 0;
   background: var(--brand);
-  transition: transform 0.2s,
-              opacity 0.2s;
+  transition:
+    transform 0.2s,
+    opacity 0.2s;
 }
 
 body.sidebar-open .menu-toggle span:nth-child(1) {
@@ -439,8 +437,9 @@ body.sidebar-open .menu-toggle span:nth-child(3) {
   text-decoration: none;
   color: var(--c-ink);
   background: var(--c-bg);
-  transition: filter 0.15s,
-              transform 0.15s;
+  transition:
+    filter 0.15s,
+    transform 0.15s;
 }
 
 .nav-item:hover {
@@ -529,8 +528,9 @@ body.sidebar-open .menu-toggle span:nth-child(3) {
   padding: 24px var(--gutter) 0;
   border-bottom: 3px solid #b7cfdd;
   background-color: #35597a;
-  background-image: linear-gradient(90deg, rgba(8, 39, 91, 0.42), rgba(8, 39, 91, 0.5)),
-                    var(--hero-img, none);
+  background-image:
+    linear-gradient(90deg, rgba(8, 39, 91, 0.42), rgba(8, 39, 91, 0.5)),
+    var(--hero-img, none);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -638,8 +638,9 @@ body.sidebar-open .menu-toggle span:nth-child(3) {
   white-space: nowrap;
   color: #fff;
   background: var(--brand);
-  transition: background 0.15s,
-              transform 0.15s;
+  transition:
+    background 0.15s,
+    transform 0.15s;
 }
 
 .btn:hover {
@@ -707,9 +708,10 @@ body.sidebar-open .menu-toggle span:nth-child(3) {
   color: var(--brand);
   background: #d2e1eb;
   box-shadow: 0 3px 10px rgba(35, 60, 76, 0.12);
-  transition: background 0.18s,
-              color 0.18s,
-              transform 0.18s;
+  transition:
+    background 0.18s,
+    color 0.18s,
+    transform 0.18s;
 }
 
 .chip:hover {
@@ -888,8 +890,9 @@ body.sidebar-open .menu-toggle span:nth-child(3) {
   color: var(--ink);
   background: var(--surface);
   box-shadow: var(--shadow);
-  transition: transform 0.18s,
-              box-shadow 0.18s;
+  transition:
+    transform 0.18s,
+    box-shadow 0.18s;
 }
 
 button.media-card {
@@ -1108,7 +1111,8 @@ button.media-card {
   bottom: 0;
   width: 250px;
   max-width: 42%;
-  filter: drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff);
+  filter: drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff)
+    drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff);
   pointer-events: none;
   object-fit: contain;
 }
@@ -1128,8 +1132,9 @@ button.media-card {
   background: #174e77;
   opacity: 0;
   box-shadow: var(--shadow);
-  transition: opacity 0.2s,
-              transform 0.2s;
+  transition:
+    opacity 0.2s,
+    transform 0.2s;
   transform: translate(-50%, 15px);
   pointer-events: none;
 }

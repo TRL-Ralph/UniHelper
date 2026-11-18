@@ -8,9 +8,9 @@
       text: "Keep taking care of yourself, and remember to cherish even the smallest of good moments.",
       links: [
         {
-          label: "Self-Care tips",
-          icon: "self-care.svg",
-          href: "self-care.html",
+          label: "mental-wellness tips",
+          icon: "mental-wellness.svg",
+          href: "mental-wellness.html",
         },
         {
           label: "Positive Articles",
@@ -31,8 +31,8 @@
       links: [
         {
           label: "Daily Reflection",
-          icon: "self-care.svg",
-          href: "self-care.html#journal",
+          icon: "mental-wellness.svg",
+          href: "mental-wellness.html#journal",
         },
         {
           label: "Wellness Articles",
@@ -51,14 +51,14 @@
           href: "learn.html#category/Stress",
         },
         {
-          label: "Self-Care Tips",
-          icon: "self-care.svg",
-          href: "self-care.html",
+          label: "mental-wellness Tips",
+          icon: "mental-wellness.svg",
+          href: "mental-wellness.html",
         },
         {
           label: "Breathing Exercises",
-          icon: "self-care.svg",
-          href: "self-care.html#exercises",
+          icon: "mental-wellness.svg",
+          href: "mental-wellness.html#exercises",
         },
       ],
     },
@@ -68,8 +68,8 @@
       links: [
         {
           label: "Breathing Exercises",
-          icon: "self-care.svg",
-          href: "self-care.html#exercises",
+          icon: "mental-wellness.svg",
+          href: "mental-wellness.html#exercises",
         },
         {
           label: "Share Experience",
@@ -99,9 +99,9 @@
           wip: true,
         },
         {
-          label: "Self-Care Tips",
-          icon: "self-care.svg",
-          href: "self-care.html",
+          label: "mental-wellness Tips",
+          icon: "mental-wellness.svg",
+          href: "mental-wellness.html",
         },
         {
           label: "Peer Support",
