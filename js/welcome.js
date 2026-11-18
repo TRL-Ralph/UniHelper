@@ -47,7 +47,7 @@
            <div class="uh-tile uh-tile-community noselect"><img class="noselect" src="assets/icons/community.svg" alt=""><div><strong>Community</strong><span>Share your story and read what other students are going through.</span></div></div>
            <div class="uh-tile uh-tile-learn noselect"><img class="noselect" src="assets/icons/learn.svg" alt=""><div><strong>Learn</strong><span>Easy articles on stress, self-esteem, relationships and wellness.</span></div></div>
            <div class="uh-tile uh-tile-help noselect"><img class="noselect" src="assets/icons/get-help.svg" alt=""><div><strong>Get Help</strong><span>Reach peer support or trusted professional support.</span></div></div>
-           <div class="uh-tile uh-tile-care noselect"><img class="noselect" src="assets/icons/self-care.svg" alt=""><div><strong>Mental Wellness</strong><span>Guided exercises and a private journal to reset your mind.</span></div></div>
+           <div class="uh-tile uh-tile-care noselect"><img class="noselect" src="assets/icons/mental-wellness.svg" alt=""><div><strong>Mental Wellness</strong><span>Guided exercises and a private journal to reset your mind.</span></div></div>
          </div>`,
     },
     {

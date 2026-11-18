@@ -132,10 +132,10 @@ window.UH = window.UH || {};
       icon: "get-help.svg",
     },
     {
-      key: "selfcare",
-      label: "Self-Care",
-      href: "self-care.html",
-      icon: "self-care.svg",
+      key: "mental-wellness",
+      label: "Mental Wellness",
+      href: "mental-wellness.html",
+      icon: "mental-wellness.svg",
     },
     {
       key: "settings",
