@@ -1,4 +1,4 @@
-/* Self-Care — format filter for exercises (same chip pattern as Learn) */
+/* Mental Wellness — format filter for exercises (same chip pattern as Learn) */
 "use strict";
 
 (function () {

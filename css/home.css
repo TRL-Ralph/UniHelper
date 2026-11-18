@@ -304,3 +304,28 @@
     height: 150px;
   }
 }
+
+/* Done: fade the card out, then collapse its space so the hero eases back; js/home.js removes it after */
+.mood-card.fading {
+  overflow: hidden;
+  pointer-events: none;
+  animation: mood-fade 0.35s ease forwards,
+             mood-collapse 0.45s ease 0.3s forwards;
+}
+
+@keyframes mood-fade {
+  to {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.97);
+  }
+}
+
+@keyframes mood-collapse {
+  to {
+    flex-basis: 0;
+    width: 0;
+    max-height: 0;
+    padding: 0;
+    margin: 0;
+  }
+}

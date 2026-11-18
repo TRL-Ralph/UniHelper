@@ -49,7 +49,7 @@
 
   /* Layout */
   --header-h: 72px;
-  --sidebar-w: 200px;
+  --sidebar-w: 224px; /* fits "Mental Wellness" on one line */
   --gutter: clamp(16px, 2.6vw, 40px);
   --content-max: 1320px;
 }
@@ -437,7 +437,6 @@ body.sidebar-open .menu-toggle span:nth-child(3) {
   font-size: var(--fs-base);
   font-weight: 500;
   text-decoration: none;
-  white-space: nowrap;
   color: var(--c-ink);
   background: var(--c-bg);
   transition: filter 0.15s,
@@ -1163,7 +1162,7 @@ button.media-card {
 /* ---------- 9. Responsive ------------------------------------------------ */
 @media (max-width: 1280px) {
   :root {
-    --sidebar-w: 176px;
+    --sidebar-w: 220px;
   }
 
   .hero-aside {
