@@ -155,14 +155,12 @@
     });
 
     doneButton.addEventListener("click", () => {
-      response.hidden = true;
-      pick.hidden = false;
-      selected = null;
-      options.forEach((option) => {
-        option.classList.remove("selected");
-        option.setAttribute("aria-pressed", "false");
+      const card = response.closest(".mood-card");
+      card.style.maxHeight = card.offsetHeight + "px"; // max-height can't animate from "none"
+      card.classList.add("fading");
+      card.addEventListener("animationend", (e) => {
+        if (e.animationName === "mood-collapse") card.remove();
       });
-      confirmButton.disabled = true;
     });
   }
 
