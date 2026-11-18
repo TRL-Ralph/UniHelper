@@ -7,7 +7,7 @@
       title: "I'm glad you're having a great day!",
       text: "Keep taking care of yourself, and remember to cherish even the smallest of good moments.",
       links: [
-        { label: "Self-Care tips", icon: "self-care.svg", href: "self-care.html" },
+        { label: "Mental Wellness tips", icon: "self-care.svg", href: "self-care.html" },
         { label: "Positive Articles", icon: "learn.svg", href: "learn.html#category/Wellness" },
         { label: "Encourage Someone", icon: "community.svg", href: "peer-support.html" }
       ]
@@ -26,7 +26,7 @@
       text: "Not everyday has to be amazing. Just remember to take care of yourself.",
       links: [
         { label: "Stress Management", icon: "learn.svg", href: "learn.html#category/Stress" },
-        { label: "Self-Care Tips", icon: "self-care.svg", href: "self-care.html" },
+        { label: "Mental Wellness Tips", icon: "self-care.svg", href: "self-care.html" },
         { label: "Breathing Exercises", icon: "self-care.svg", href: "self-care.html#exercises" }
       ]
     },
@@ -45,7 +45,7 @@
       text: "You don't have to go through difficult moments alone.",
       links: [
         { label: "Professional Support", icon: "get-help.svg", href: "#", wip: true },
-        { label: "Self-Care Tips", icon: "self-care.svg", href: "self-care.html" },
+        { label: "Mental Wellness Tips", icon: "self-care.svg", href: "self-care.html" },
         { label: "Peer Support", icon: "get-help.svg", href: "peer-support.html" }
       ]
     }
@@ -90,11 +90,12 @@
     });
 
     doneButton.addEventListener("click", () => {
-      response.hidden = true;
-      pick.hidden = false;
-      selected = null;
-      options.forEach((option) => { option.classList.remove("selected"); option.setAttribute("aria-pressed", "false"); });
-      confirmButton.disabled = true;
+      const card = response.closest(".mood-card");
+      card.style.maxHeight = card.offsetHeight + "px"; // max-height can't animate from "none"
+      card.classList.add("fading");
+      card.addEventListener("animationend", (e) => {
+        if (e.animationName === "mood-collapse") card.remove();
+      });
     });
   }
 

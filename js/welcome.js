@@ -44,7 +44,7 @@
            <div class="uh-tile uh-tile-community"><img src="assets/icons/community.svg" alt=""><div><strong>Community</strong><span>Share your story and read what other students are going through.</span></div></div>
            <div class="uh-tile uh-tile-learn"><img src="assets/icons/learn.svg" alt=""><div><strong>Learn</strong><span>Easy articles on stress, self-esteem, relationships and wellness.</span></div></div>
            <div class="uh-tile uh-tile-help"><img src="assets/icons/get-help.svg" alt=""><div><strong>Get Help</strong><span>Reach peer support or trusted professional support.</span></div></div>
-           <div class="uh-tile uh-tile-care"><img src="assets/icons/self-care.svg" alt=""><div><strong>Self-Care</strong><span>Guided exercises and a private journal to reset your mind.</span></div></div>
+           <div class="uh-tile uh-tile-care"><img src="assets/icons/self-care.svg" alt=""><div><strong>Mental Wellness</strong><span>Guided exercises and a private journal to reset your mind.</span></div></div>
          </div>`
         },
         {
@@ -159,8 +159,7 @@
 
     function onKey(event) {
         if (event.key === "Escape") {
-            event.stopPropagation();
-            close();
+            event.stopPropagation(); // Escape must not dismiss the welcome popup
         } else if (event.key === "ArrowRight") {
             next();
         } else if (event.key === "ArrowLeft") {
@@ -182,10 +181,6 @@
     nextBtn.addEventListener("click", next);
     backBtn.addEventListener("click", back);
     closeBtn.addEventListener("click", close);
-    overlay.addEventListener("click", function (event) {
-        if (event.target === overlay) close();
-    });
-
     document.body.appendChild(overlay);
     previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";

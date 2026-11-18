@@ -97,7 +97,7 @@ window.UH = window.UH || {};
     { key: "community", label: "Community", href: null, icon: "community.svg" },
     { key: "learn", label: "Learn", href: "learn.html", icon: "learn.svg" },
     { key: "help", label: "Get Help", href: "get-help.html", icon: "get-help.svg" },
-    { key: "selfcare", label: "Self-Care", href: "self-care.html", icon: "self-care.svg" },
+    { key: "selfcare", label: "Mental Wellness", href: "self-care.html", icon: "self-care.svg" },
     { key: "settings", label: "Settings", href: "settings.html", icon: "settings.svg" }
   ];
 
