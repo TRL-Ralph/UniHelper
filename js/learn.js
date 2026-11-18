@@ -142,10 +142,10 @@
       .join("");
 
     articleView.innerHTML = `
-      <a class="btn btn-soft btn-sm article-back" href="#learn"><span aria-hidden="true">←</span> Back to Articles</a>
+      <a class="btn btn-soft btn-sm article-back noselect" href="#learn"><span aria-hidden="true">←</span> Back to Articles</a>
       <div class="article-meta">
-        <span class="pill" data-category="${article.category}">${UH.esc(article.category)}</span>
-        <span>${article.readTime} min read</span><span>UniHelper Learn</span>
+        <span class="pill noselect" data-category="${article.category}">${UH.esc(article.category)}</span>
+        <span class="noselect">${article.readTime} min read</span><span class="noselect">UniHelper Learn</span>
       </div>
       <h1 class="article-title">${UH.esc(article.title)}</h1>
       <p class="article-deck">${UH.esc(article.deck)}</p>
@@ -158,7 +158,7 @@
       </div>
       ${
         related.length
-          ? `<aside class="related"><div class="section-head"><h2>More in ${UH.esc(article.category)}</h2></div>
+          ? `<aside class="related noselect"><div class="section-head noselect"><h2>More in ${UH.esc(article.category)}</h2></div>
         <div class="card-grid">${related.map(cardMarkup).join("")}</div></aside>`
           : ""
       }`;
