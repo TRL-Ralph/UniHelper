@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/auth.css">
   <script src="js/auth.js" defer></script>
   <link rel="stylesheet" href="css/welcome.css">
+  <link rel="stylesheet" href="css/common.css">
   <script src="js/welcome.js" defer></script>
 </head>
 
@@ -20,26 +21,27 @@
   <main class="auth-page">
     <section class="auth-card">
       <header class="auth-head">
-        <img class="auth-logo" src="assets/images/logo.svg">
+        <img class="auth-logo noselect" src="assets/images/logo.svg">
         <div class="auth-title">
-          <img class="laurel laurel-left" src="assets/icons/laurelLeft.png">
-          <h1>Welcome Back!</h1>
-          <p>Log in to UniHelper</p>
-          <img class="laurel laurel-right" src="assets/icons/laurelRight.png">
+          <img class="laurel laurel-left noselect" src="assets/icons/laurelLeft.png">
+          <h1 class="noselect">Welcome Back!</h1>
+          <p class="noselect">Log in to UniHelper</p>
+          <img class="laurel laurel-right noselect" src="assets/icons/laurelRight.png">
         </div>
       </header>
       <form class="auth-form" id="loginForm" novalidate>
         <div class="field">
           <div class="field-wrap">
-            <img class="field-icon" src="assets/icons/envelopeIcon.png">
-            <input id="username" type="text" placeholder="Username or Email" autocomplete="username">
+            <img class="field-icon noselect" src="assets/icons/envelopeIcon.png">
+            <input class="noselect" id="username" type="text" placeholder="Username or Email" autocomplete="username">
           </div>
-          <p class="field-error"></p>
+          <p class="field-error noselect"></p>
         </div>
         <div class="field">
           <div class="field-wrap">
-            <img class="field-icon" src="assets/icons/lockIcon.png">
-            <input id="password" type="password" placeholder="Password" autocomplete="current-password">
+            <img class="field-icon noselect" src="assets/icons/lockIcon.png">
+            <input class="noselect" id="password" type="password" placeholder="Password"
+              autocomplete="current-password">
             <button class="eye-toggle" type="button" aria-label="Show password"><svg class="eye-icon"
                 viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12Z"></path>
@@ -47,19 +49,21 @@
                 <path class="eye-slash" d="M4 5l16 14"></path>
               </svg></button>
           </div>
-          <p class="field-error"></p>
+          <p class="field-error noselect"></p>
         </div>
         <div class="form-row">
-          <label class="remember"><input type="checkbox" id="remember"><span class="box"></span>Remember Me</label>
-          <a class="forgot" href="#" data-wip>Forgot password?</a>
+          <label class="remember noselect"><input type="checkbox" id="remember"><span class="box"></span
+              class="noselect">Remember Me</label>
+          <a class="forgot noselect" href="#" data-wip>Forgot password?</a>
         </div>
-        <button class="auth-button" type="submit">Log In<img src="assets/icons/arrowWhite.png"></button>
-        <div class="or-divider"><span></span><small>or</small><span></span></div>
-        <button class="university-button" type="button" data-wip><img
+        <button class="auth-button noselect" type="submit">Log In<img src="assets/icons/arrowWhite.png"></button>
+        <div class="or-divider noselect"><span></span><small>or</small><span></span></div>
+        <button class="university-button noselect" type="button" data-wip><img
             src="assets/images/university-emblem.png">University of Makati Email</button>
-        <p class="switch">Don’t have an account? <a href="signup.html">Sign up<img src="assets/icons/arrowBlue.png"></a>
+        <p class="switch noselect">Don't have an account? <a class="noselect" href="signup.html">Sign up<img
+              src="assets/icons/arrowBlue.png"></a>
         </p>
-        <a class="guest" href="#" id="guestLogin">Sign in as Guest</a>
+        <a class="guest noselect" href="#" id="guestLogin">Sign in as Guest</a>
       </form>
     </section>
   </main>

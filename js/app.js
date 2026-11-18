@@ -165,7 +165,7 @@ window.UH = window.UH || {};
     const header = document.createElement("header");
     header.className = "topbar";
     header.innerHTML = `
-      <img class="topbar-leaf-left" src="assets/icons/leaf-left.png" alt="">
+      <img class="topbar-leaf-left noselect" src="assets/icons/leaf-left.png" alt="">
       <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="sidebar">
         <span></span><span></span><span></span>
       </button>
@@ -176,7 +176,7 @@ window.UH = window.UH || {};
           <span class="brand-tag noselect">You're not alone. UMak is with you.</span>
         </span>
       </a>
-      <img class="topbar-leaf" src="assets/icons/bell-leaf.svg" alt="" aria-hidden="true">
+      <img class="topbar-leaf noselect" src="assets/icons/bell-leaf.svg" alt="" aria-hidden="true">
       <div class="topbar-actions">
         <button class="icon-btn noselect" type="button" aria-label="Notifications" data-wip><img src="assets/icons/bell.svg" alt=""></button>
         <span class="topbar-divider" aria-hidden="true"></span>
