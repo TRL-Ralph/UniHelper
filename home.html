@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/site.css">
   <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/common.css">
   <script src="js/data.js" defer></script>
   <script src="js/app.js" defer></script>
   <script src="js/home.js" defer></script>
@@ -24,38 +25,39 @@
   <main class="main" id="main">
     <section class="page-hero hero--campus" aria-labelledby="homeTitle">
       <div class="hero-intro">
-        <img class="hero-mascot" src="assets/images/umi.svg" alt="Umi, the UniHelper mascot">
+        <img class="hero-mascot noselect" src="assets/images/umi.svg" alt="Umi, the UniHelper mascot">
         <div>
-          <h1 id="homeTitle">Hi, I'm Umi!</h1>
-          <p>This is a safe space for UMak students to share, learn, and find support. Because you matter.</p>
-          <a class="btn btn-sm" href="#" data-wip>Learn more about UniHelper <img src="assets/icons/arrow-white.svg"
-              alt=""></a>
+          <h1 class="noselect" id="homeTitle">Hi, I'm Umi!</h1>
+          <p class="noselect">This is a safe space for UMak students to share, learn, and find support. Because you
+            matter.</p>
+          <a class="btn btn-sm noselect" href="#" data-wip>Learn more about UniHelper
+            <img class="noselect" src="assets/icons/arrow-white.svg" alt=""></a>
         </div>
       </div>
 
       <aside class="hero-aside mood-card" aria-label="Mood check-in">
         <div id="moodPick">
-          <h2>How are you feeling today?</h2>
+          <h2 class="noselect">How are you feeling today?</h2>
           <div class="mood-options" role="group" aria-label="Choose your mood">
-            <button class="mood-option" type="button" data-mood="great"><img src="assets/mood/great.svg"
+            <button class="mood-option noselect" type="button" data-mood="great"><img src="assets/mood/great.svg"
                 alt=""><span>Great</span></button>
-            <button class="mood-option" type="button" data-mood="good"><img src="assets/mood/good.svg"
+            <button class="mood-option noselect" type="button" data-mood="good"><img src="assets/mood/good.svg"
                 alt=""><span>Good</span></button>
-            <button class="mood-option" type="button" data-mood="okay"><img src="assets/mood/okay.svg"
+            <button class="mood-option noselect" type="button" data-mood="okay"><img src="assets/mood/okay.svg"
                 alt=""><span>Okay</span></button>
-            <button class="mood-option" type="button" data-mood="stressed"><img src="assets/mood/stressed.svg"
+            <button class="mood-option noselect" type="button" data-mood="stressed"><img src="assets/mood/stressed.svg"
                 alt=""><span>Stressed</span></button>
-            <button class="mood-option" type="button" data-mood="sad"><img src="assets/mood/sad.svg"
+            <button class="mood-option noselect" type="button" data-mood="sad"><img src="assets/mood/sad.svg"
                 alt=""><span>Sad</span></button>
           </div>
-          <button class="btn btn-sm mood-confirm" id="moodConfirm" type="button" disabled>Confirm</button>
+          <button class="btn btn-sm mood-confirm noselect" id="moodConfirm" type="button" disabled>Confirm</button>
         </div>
 
         <div class="mood-response" id="moodResponse" hidden aria-live="polite">
-          <h2 id="moodResponseTitle"></h2>
-          <p id="moodResponseText"></p>
+          <h2 class="noselect" id="moodResponseTitle"></h2>
+          <p class="noselect" id="moodResponseText"></p>
           <div class="mood-links" id="moodLinks"></div>
-          <button class="btn btn-sm mood-done" id="moodDone" type="button">Done</button>
+          <button class="btn btn-sm mood-done noselect" id="moodDone" type="button">Done</button>
         </div>
       </aside>
     </section>
@@ -64,16 +66,17 @@
       <div class="home-panels">
         <section class="panel" aria-labelledby="featuredTitle">
           <div class="panel-head">
-            <h2 id="featuredTitle">Featured Articles</h2>
-            <a class="view-all" href="learn.html">View all <img src="assets/icons/arrow-blue.svg" alt=""></a>
+            <h2 class="noselect" id="featuredTitle">Featured Articles</h2>
+            <a class="view-all noselect" href="learn.html">View all <img src="assets/icons/arrow-blue.svg" alt=""></a>
           </div>
           <div id="homeArticles"></div>
         </section>
 
         <section class="panel" aria-labelledby="postsTitle">
           <div class="panel-head">
-            <h2 id="postsTitle">Recent Community Posts</h2>
-            <a class="view-all" href="peer-support.html">View all <img src="assets/icons/arrow-blue.svg" alt=""></a>
+            <h2 class="noselect" id="postsTitle">Recent Community Posts</h2>
+            <a class="view-all noselect" href="peer-support.html">View all <img src="assets/icons/arrow-blue.svg"
+                alt=""></a>
           </div>
           <div id="homePosts"></div>
         </section>
