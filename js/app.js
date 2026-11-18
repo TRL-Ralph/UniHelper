@@ -187,7 +187,7 @@ window.UH = window.UH || {};
       const active = item.key === PAGE;
       const attrs = item.href ? `href="${item.href}"` : `href="#" data-wip`;
       return `<a class="nav-item nav-${item.key}${active ? " active" : ""}" ${attrs}${active ? ' aria-current="page"' : ""}>
-        <img src="assets/icons/${item.icon}" alt=""><span>${item.label}</span></a>`;
+        <img class="noselect" src="assets/icons/${item.icon}" alt=""><span class="noselect" >${item.label}</span></a>`;
     }).join("");
 
     const aside = document.createElement("aside");
