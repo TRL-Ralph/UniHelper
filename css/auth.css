@@ -3,9 +3,12 @@
 }
 
 body {
-  margin: 0;
   min-height: 100vh;
-  font-family: "Playpen Sans", "Trebuchet MS", Arial, sans-serif;
+  margin: 0;
+  font-family: "Playpen Sans",
+               "Trebuchet MS",
+               Arial,
+               sans-serif;
   color: #123f7a;
   background: #dce9ef;
 }
@@ -18,23 +21,23 @@ a {
 
 .auth-bg {
   position: fixed;
-  inset: 0;
   z-index: 0;
-  width: 100%;
-  height: 100%;
-  max-width: none;
-  object-fit: fill;
   display: block;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  object-fit: fill;
+  inset: 0;
 }
 
 .auth-page {
   position: relative;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
   padding: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .auth-card {
@@ -66,16 +69,16 @@ a {
 .auth-title h1 {
   margin: 0;
   font-size: 40px;
-  line-height: 50px;
   font-weight: 700;
+  line-height: 50px;
   color: #135b8f;
 }
 
 .auth-title p {
   margin: 4px 0 0;
   font-size: 18px;
-  line-height: 26px;
   font-weight: 500;
+  line-height: 26px;
   color: #123f7a;
 }
 
@@ -84,8 +87,8 @@ a {
   top: -12px;
   width: 92px;
   height: 116px;
-  object-fit: contain;
   pointer-events: none;
+  object-fit: contain;
 }
 
 .laurel-left {
@@ -97,9 +100,9 @@ a {
 }
 
 .auth-form {
-  margin-top: 22px;
   display: flex;
   flex-direction: column;
+  margin-top: 22px;
 }
 
 .field {
@@ -127,11 +130,11 @@ a {
 }
 
 .field-icon {
+  flex-shrink: 0;
   width: 24px;
   height: 24px;
   margin: 0 12px 0 18px;
   object-fit: contain;
-  flex-shrink: 0;
 }
 
 .field-wrap input {
@@ -140,11 +143,13 @@ a {
   height: 100%;
   padding: 0 14px 0 0;
   border: none;
-  outline: none;
-  background: transparent;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial,
+               Helvetica,
+               sans-serif;
   font-size: 16px;
   color: #123f7a;
+  background: transparent;
+  outline: none;
 }
 
 .field-wrap input::placeholder {
@@ -152,12 +157,12 @@ a {
 }
 
 .eye-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 48px;
   height: 100%;
   padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border: none;
   background: none;
   cursor: pointer;
@@ -179,7 +184,9 @@ a {
 
 .field-error {
   margin: 3px 0 0 20px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial,
+               Helvetica,
+               sans-serif;
   font-size: 12px;
   color: #d64545;
 }
@@ -189,11 +196,13 @@ a {
 }
 
 .form-row {
-  margin: 2px 3px 8px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+  margin: 2px 3px 8px;
+  font-family: Arial,
+               Helvetica,
+               sans-serif;
   font-size: 12.5px;
   font-weight: 700;
 }
@@ -213,19 +222,19 @@ a {
 }
 
 .remember .box {
+  position: relative;
   width: 18px;
   height: 18px;
   border: 2px solid #3d82cd;
   border-radius: 5px;
   background: #fff;
-  position: relative;
 }
 
-.remember input:checked+.box::after {
+.remember input:checked + .box::after {
   content: "";
   position: absolute;
-  left: 4px;
   top: 0;
+  left: 4px;
   width: 4px;
   height: 9px;
   border: solid #3d82cd;
@@ -233,13 +242,13 @@ a {
   transform: rotate(45deg);
 }
 
-.remember input:focus-visible+.box {
+.remember input:focus-visible + .box {
   box-shadow: 0 0 0 3px rgba(61, 130, 205, 0.3);
 }
 
 .forgot {
-  color: #3d82cd;
   text-decoration: none;
+  color: #3d82cd;
 }
 
 .forgot:hover,
@@ -248,17 +257,17 @@ a {
 }
 
 .auth-button {
-  height: 44px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 14px;
+  height: 44px;
   border: none;
   border-radius: 22px;
-  background: linear-gradient(90deg, #2e78d0 0%, #4a9cea 100%);
-  color: #fff;
   font-size: 18px;
   font-weight: 500;
+  color: #fff;
+  background: linear-gradient(90deg, #2e78d0 0%, #4a9cea 100%);
   box-shadow: 0 2px 5px rgba(40, 90, 160, 0.35);
   cursor: pointer;
 }
@@ -275,11 +284,13 @@ a {
 }
 
 .or-divider {
-  margin: 12px 0 10px;
   display: flex;
   align-items: center;
   gap: 18px;
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 12px 0 10px;
+  font-family: Arial,
+               Helvetica,
+               sans-serif;
   font-size: 13px;
   font-weight: 700;
   color: #1c4a99;
@@ -292,19 +303,21 @@ a {
 }
 
 .university-button {
-  height: 48px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 24px;
+  height: 48px;
   border: 1px solid #c9d9ea;
   border-radius: 24px;
-  background: linear-gradient(180deg, #ffffff 0%, #f1f6fc 100%);
-  box-shadow: 0 2px 4px rgba(90, 120, 170, 0.28);
-  color: #4a6fa5;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial,
+               Helvetica,
+               sans-serif;
   font-size: 15px;
   font-weight: 700;
+  color: #4a6fa5;
+  background: linear-gradient(180deg, #ffffff 0%, #f1f6fc 100%);
+  box-shadow: 0 2px 4px rgba(90, 120, 170, 0.28);
   cursor: pointer;
 }
 
@@ -320,10 +333,12 @@ a {
 
 .switch {
   margin: 14px 0 0;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial,
+               Helvetica,
+               sans-serif;
   font-size: 13px;
   font-weight: 700;
+  text-align: center;
   color: #1c4a99;
 }
 
@@ -332,8 +347,8 @@ a {
   align-items: center;
   gap: 6px;
   margin-left: 14px;
-  color: #3d82cd;
   text-decoration: none;
+  color: #3d82cd;
 }
 
 .switch a img {
@@ -346,11 +361,13 @@ a {
 .guest {
   align-self: center;
   margin-top: 8px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial,
+               Helvetica,
+               sans-serif;
   font-size: 13px;
   font-weight: 700;
-  color: #3d82cd;
   text-decoration: underline;
+  color: #3d82cd;
 }
 
 .auth-card-tall .auth-form {
@@ -360,8 +377,8 @@ a {
 .rule {
   width: 100%;
   height: 1px;
-  margin: 18px 0 20px;
   border: none;
+  margin: 18px 0 20px;
   background: #a9c0dc;
 }
 
@@ -371,12 +388,12 @@ a {
 
 .wip-backdrop {
   position: fixed;
-  inset: 0;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.45);
   z-index: 1000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.45);
+  inset: 0;
 }
 
 .wip-backdrop.open {
@@ -385,14 +402,14 @@ a {
 
 .wip-box {
   position: relative;
+  display: flex;
+  flex-direction: column;
   width: 738px;
   height: 496px;
   padding: 25px 35px 14px;
-  display: flex;
-  flex-direction: column;
-  background: #fff;
   border-radius: 8px;
   color: #135b93;
+  background: #fff;
   box-shadow: 0 4px 14px #0004;
 }
 
@@ -406,8 +423,8 @@ a {
   width: 497px;
   margin-top: 24px;
   font-size: 21px;
-  line-height: 33px;
   font-weight: bold;
+  line-height: 33px;
   text-align: justify;
 }
 
@@ -421,14 +438,14 @@ a {
 
 .wip-back {
   align-self: center;
-  margin-top: auto;
   width: 202px;
   height: 41px;
   border: none;
   border-radius: 21px;
-  background: #126495;
-  color: #fff;
+  margin-top: auto;
   font-size: 22px;
+  color: #fff;
+  background: #126495;
   cursor: pointer;
 }
 
@@ -438,13 +455,13 @@ a {
 
 .wip-mascot {
   position: absolute;
-  left: 480px;
   top: -50px;
+  left: 480px;
   width: 380px;
   height: 620px;
-  object-fit: contain;
-  pointer-events: none;
   filter: drop-shadow(4px 0 0 #fff) drop-shadow(-4px 0 0 #fff) drop-shadow(0 4px 0 #fff) drop-shadow(0 -4px 0 #fff);
+  pointer-events: none;
+  object-fit: contain;
 }
 
 @media (max-height: 650px) {
@@ -485,18 +502,21 @@ a {
     font-size: 36px;
   }
 }
-/* ---------- login / guest loading overlay ---------- */
+
+/* ---------- login / signup / guest loading overlay ---------- */
 .loading-overlay {
   position: fixed;
-  inset: 0;
   z-index: 5000;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   padding: 24px;
-  background: rgba(8, 20, 34, 0.74); /* dim only, no blur */
+  background: url("../assets/images/loading-top.svg") top / 100% auto no-repeat,
+              url("../assets/images/loading-bottom.svg") bottom / 100% auto no-repeat,
+              #c1bde0;
   opacity: 0;
   transition: opacity 0.3s ease;
+  inset: 0;
 }
 
 .loading-overlay.show {
@@ -507,9 +527,10 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: min(380px, 100%);
-  transform: translateY(14px) scale(0.96);
+  width: clamp(280px, 38.5vw, 740px);
+  max-width: 100%;
   transition: transform 0.35s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+  transform: translateY(14px) scale(0.96);
 }
 
 .loading-overlay.show .loading-card {
@@ -520,18 +541,17 @@ a {
   display: block;
   width: 100%;
   height: auto;
-  filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.35)); /* keeps the dark skirt readable on the dim */
 }
 
 .loading-text {
-  margin: 4px 0 0;
   min-height: 1.3em;
-  font-size: 2rem;
+  margin: 4px 0 0;
+  font-size: clamp(2rem, 4.5vw, 5.4rem);
   font-weight: 700;
   line-height: 1.3;
-  color: #fff;
-  text-shadow: 2px 2px 0 #3f4d7c;
   text-align: center;
+  color: #3d4d7a;
+  text-shadow: 2px 3px 2px rgba(61, 77, 122, 0.35);
 }
 
 .loading-text.swap {
@@ -544,10 +564,10 @@ a {
 
 .preload-frame {
   position: absolute;
+  visibility: hidden;
   width: 0;
   height: 0;
   border: 0;
-  visibility: hidden;
 }
 
 @keyframes loading-swap {
@@ -563,7 +583,6 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
-
   .loading-overlay,
   .loading-card,
   .loading-text.swap {

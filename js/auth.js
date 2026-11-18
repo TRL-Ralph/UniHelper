@@ -32,7 +32,7 @@ function saveSession(type, name) {
   try { localStorage.setItem(SESSION_KEY, JSON.stringify({ type, name })); } catch (e) { /* storage blocked */ }
 }
 
-/* Loading overlay: shown only on login / guest entry. The home page preloads in a
+/* Loading overlay: shown on login, signup and guest entry. The home page preloads in a
    hidden iframe; we leave once it has loaded AND the three messages have played once. */
 const LOADING_MESSAGES = ["Loading!", "One moment!", "Almost there!"];
 const LOADING_STEP_MS = 1400;
@@ -50,7 +50,7 @@ function enterSite() {
   overlay.setAttribute("role", "status");
   overlay.innerHTML = `
     <div class="loading-card">
-      <img src="assets/video/umi-loading.webp" alt="">
+      <img src="assets/video/Loading.gif" alt="">
       <p class="loading-text"></p>
     </div>`;
   const text = overlay.querySelector(".loading-text");
@@ -187,7 +187,7 @@ function initSignup() {
 
     if (okUser && okEmail && okPass && okConfirm) {
       saveSession("user", username.value.trim());
-      window.location.href = HOME_PAGE;
+      enterSite();
     }
   });
 }
