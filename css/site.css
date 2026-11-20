@@ -799,10 +799,10 @@ body.sidebar-open .menu-toggle span:nth-child(3) {
   flex: 0 0 48px;
   place-items: center;
   width: 48px;
-  height: 48px;
   border: 3px solid var(--c-strong);
   border-radius: 50%;
   background: var(--c-icon);
+  aspect-ratio: 1;
 }
 
 .section-head .heading-icon img {
@@ -859,8 +859,8 @@ body.sidebar-open .menu-toggle span:nth-child(3) {
 
 .view-all img {
   width: 16px;
-  height: 16px;
   object-fit: contain;
+  aspect-ratio: 1;
 }
 
 .empty-state {
